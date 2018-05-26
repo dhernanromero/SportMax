@@ -5,3 +5,10 @@ D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMa
 D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\bin\Debug\SportMaxModel.pdb
 D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.dll
 D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\bin\Debug\SportMaxController.dll
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\bin\Debug\SportMaxController.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\bin\Debug\SportMaxModel.dll
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\bin\Debug\SportMaxModel.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.dll
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.pdb

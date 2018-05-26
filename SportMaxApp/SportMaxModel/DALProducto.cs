@@ -12,7 +12,7 @@ namespace SportMaxModel
     {
         Conexion objConexion = new Conexion();
 
-
+        //metodo test 
         public int AgregarProducto(int iIdProducto, int iIdTipoProducto, string sDescripcion,float mPrecio, int iCantidad)
         {
 

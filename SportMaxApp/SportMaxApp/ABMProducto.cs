@@ -15,6 +15,7 @@ namespace SportMaxApp
     {
         public abmProducto(Form frmPadre)
         {
+            InitializeComponent(); 
             Padre = frmPadre;
         }
 

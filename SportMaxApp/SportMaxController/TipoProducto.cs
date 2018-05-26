@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SportMaxModel;
 using System.Data;
+using SportMaxModel;
 
 namespace SportMaxController
 {
@@ -35,7 +35,7 @@ namespace SportMaxController
        #endregion
 
        #region Metodos
-
+       //test
        public void AgregarTipoProducto()
        {
             DALTipoProducto dalTProducto = new DALTipoProducto();

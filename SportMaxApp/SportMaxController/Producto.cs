@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SportMaxModel;
 using System.Data;
-
+using SportMaxModel;
 
 namespace SportMaxController
 {
@@ -70,7 +69,7 @@ namespace SportMaxController
            }
 
        }
-
+       //test
        public List<Producto> Listar()
        {
            DALProducto dalProducto = new DALProducto();
@@ -84,6 +83,7 @@ namespace SportMaxController
 
                pivot.Codigo = int.Parse(fila["idProducto"].ToString());
                pivot.TipoProducto.CodigoTipo = int.Parse(fila["IdTipoProducto"].ToString());
+               pivot.TipoProducto.Descripcion = fila["Descripcion"].ToString();
                pivot.Descripcion = fila["Descripcion"].ToString();
                pivot.Precio = float.Parse(fila["Precio"].ToString());
                pivot.Cantidad = int.Parse(fila["Cantidad"].ToString());
