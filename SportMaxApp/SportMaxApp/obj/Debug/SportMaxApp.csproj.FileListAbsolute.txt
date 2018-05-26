@@ -1,0 +1,16 @@
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe.config
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.pdb
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.csprojResolveAssemblyReference.cache
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Login.resources
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Properties.Resources.resources
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.frmPrincipal.resources
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.csproj.GenerateResource.Cache
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.exe
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.pdb
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.frmProducto.resources
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxController.dll
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxController.pdb
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxModel.dll
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxModel.pdb
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.abmProducto.resources

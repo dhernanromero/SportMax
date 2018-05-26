@@ -1,0 +1,7 @@
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.csprojResolveAssemblyReference.cache
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\bin\Debug\SportMaxController.dll
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\bin\Debug\SportMaxController.pdb
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\bin\Debug\SportMaxModel.dll
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\bin\Debug\SportMaxModel.pdb
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.dll
+D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.pdb

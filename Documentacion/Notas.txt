@@ -1,0 +1,26 @@
+modelo de entidad relacion - diagrama de clases
+Producto
+	codigo
+	descripcion
+	tipo de producto
+tipo de producto
+	codigo
+	descripcion
+
+Agregar, Actualizar. listar, borrar productos 
+
+caso de uso del agregar 
+diagrama de secuencia 
+
+averiguar el uso de los siguientes tipos de datos
+DataSet: representa uana cache de datos en memoria 
+DataTable: representa una tabla de datos en memoria
+	DataColum: Representa el esquema de una columna en un DataTable.
+	DataRow: representa la fial de datos de un DataTable
+
+-------------------------------------------
+abtract ?
+protected: se puede setear desde el hijo
+
+override: no puede sobreesbrivir la funcion
+las clsases en archivos distintos
