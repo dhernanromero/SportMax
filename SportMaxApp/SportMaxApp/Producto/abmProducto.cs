@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SportMaxController;
+using SportMaxController.Clases;
 
 namespace SportMaxApp
 {
@@ -68,17 +68,23 @@ namespace SportMaxApp
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmProducto frmProd = new frmProducto(this, "A");
-            this.Hide();
+            //this.Hide();
 
-            frmProd.Show();
+            frmProd.ShowDialog();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmProducto frmProd = new frmProducto(this, "M");
-            this.Hide();
+            //this.Hide();
 
-            frmProd.Show();
+            frmProd.ShowDialog();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Padre.Show(); 
         }
 
 

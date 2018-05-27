@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 using System.Data;
 using SportMaxModel;
 
-namespace SportMaxController
+namespace SportMaxController.Clases
 {
    public class TipoProducto
    {
 
        #region Variables Privadas
 
-       private int _codigoTipo;
+       private int _idTipoProducto;
        private string _descripcion;
 
        #endregion 
 
        #region Variables Publicas
 
-       public int CodigoTipo
+       public int IdTipoProducto
        {
-           get { return _codigoTipo; }
-           set { _codigoTipo = value; }
+           get { return _idTipoProducto; }
+           set { _idTipoProducto = value; }
        } 
 
        public string Descripcion
@@ -42,7 +42,7 @@ namespace SportMaxController
             
            try 
 	        {	        
-	            dalTProducto.AgregarTipoProducto(this.CodigoTipo, this.Descripcion);	
+	            dalTProducto.AgregarTipoProducto(this.IdTipoProducto, this.Descripcion);	
 	        }
 	        catch (Exception)
 	        {
@@ -64,7 +64,7 @@ namespace SportMaxController
            {
                pivot = new TipoProducto();
 
-               pivot.CodigoTipo = int.Parse(fila["idTipoProducto"].ToString());
+               pivot.IdTipoProducto = int.Parse(fila["idTipoProducto"].ToString());
                pivot.Descripcion = fila["Descripcion"].ToString();
 
                lista.Add(pivot);

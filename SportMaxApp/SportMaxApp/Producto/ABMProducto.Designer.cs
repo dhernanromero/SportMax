@@ -50,7 +50,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(419, 68);
+            this.btnAgregar.Location = new System.Drawing.Point(722, 68);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(419, 120);
+            this.btnModificar.Location = new System.Drawing.Point(722, 120);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(419, 179);
+            this.btnEliminar.Location = new System.Drawing.Point(722, 179);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 22);
             this.btnEliminar.TabIndex = 3;
@@ -79,12 +79,13 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(419, 245);
+            this.btnSalir.Location = new System.Drawing.Point(722, 245);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // rbtCodigo
             // 
@@ -132,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 321);
+            this.ClientSize = new System.Drawing.Size(874, 321);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rbtDescrip);

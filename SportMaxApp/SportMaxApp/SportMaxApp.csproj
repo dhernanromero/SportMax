@@ -44,16 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="abmProducto.cs">
+    <Compile Include="Producto\abmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="abmProducto.Designer.cs">
+    <Compile Include="Producto\abmProducto.Designer.cs">
       <DependentUpon>abmProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProducto.cs">
+    <Compile Include="Producto\frmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProducto.Designer.cs">
+    <Compile Include="Producto\frmProducto.Designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -70,10 +70,10 @@
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="abmProducto.resx">
+    <EmbeddedResource Include="Producto\abmProducto.resx">
       <DependentUpon>abmProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProducto.resx">
+    <EmbeddedResource Include="Producto\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">

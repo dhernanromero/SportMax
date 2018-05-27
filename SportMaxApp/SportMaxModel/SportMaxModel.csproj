@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DALMarca.cs" />
     <Compile Include="DALProducto.cs" />
     <Compile Include="DALTipoProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
