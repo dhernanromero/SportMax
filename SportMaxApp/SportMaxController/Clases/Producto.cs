@@ -187,6 +187,20 @@ namespace SportMaxController.Clases
                throw;
            }
        }
+
+       public int Eliminar()
+       {
+           DALProducto dalProducto = new DALProducto();
+           try
+           {
+               return dalProducto.EliminarProducto(this.Codigo);
+           }
+           catch (Exception)
+           {
+               
+               throw;
+           }
+       }
        #endregion
    }
 }

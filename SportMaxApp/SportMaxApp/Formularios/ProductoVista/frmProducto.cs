@@ -125,7 +125,17 @@ namespace SportMaxApp.Formularios.ProductoVista
         public void ModProducto()
         {
             Producto nProd = new Producto();
-            nProd.BuscarxCodigo(IdProd);
+            List<Producto> lProducto = new List<Producto>();
+            
+            lProducto = nProd.BuscarxCodigo(IdProd);
+
+            txtCodProducto.Text = lProducto[0].Codigo.ToString();
+            txtDescripcion.Text = lProducto[0].Descripcion;
+            cboTipo.SelectedItem = lProducto[0].TipoProducto.IdTipoProducto;
+            cboMarca.SelectedItem = lProducto[0].Marca.IdMarca;
+            txtPrecio.Text = lProducto[0].Precio.ToString();
+            txtCantidad.Text = lProducto[0].Cantidad.ToString(); 
+
         }
 
     }

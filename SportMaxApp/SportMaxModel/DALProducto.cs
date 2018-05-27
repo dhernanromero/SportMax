@@ -121,6 +121,23 @@ namespace SportMaxModel
 
                 throw;
             }
+         }
+
+        public int EliminarProducto(int iIdProducto)
+        {
+            SqlParameter[] param = new SqlParameter[1];
+            param[1] = objConexion.crearParametro("@IdProducto", iIdProducto);
+
+            try
+            {
+                return objConexion.EscribirPorStoreProcedure("Producto_Eliminar", param);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
         }
+        
     }
 }

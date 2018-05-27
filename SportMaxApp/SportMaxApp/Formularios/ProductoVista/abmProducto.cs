@@ -59,7 +59,7 @@ namespace SportMaxApp.Formularios.ProductoVista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmProducto frmProd = new frmProducto(this, "A");
+            frmProducto frmProd = new frmProducto(this, "A",0);
             //this.Hide();
 
             frmProd.ShowDialog();
@@ -68,7 +68,9 @@ namespace SportMaxApp.Formularios.ProductoVista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            frmProducto frmProd = new frmProducto(this, "M");
+            int idProd = int.Parse(gridProductos.CurrentCell.Value.ToString());  
+ 
+            frmProducto frmProd = new frmProducto(this, "M", idProd);
             //this.Hide();
 
             frmProd.ShowDialog();
