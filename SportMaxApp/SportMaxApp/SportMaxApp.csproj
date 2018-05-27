@@ -44,16 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Producto\abmProducto.cs">
+    <Compile Include="Formularios\ProductoVista\abmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Producto\abmProducto.Designer.cs">
+    <Compile Include="Formularios\ProductoVista\abmProducto.Designer.cs">
       <DependentUpon>abmProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Producto\frmProducto.cs">
+    <Compile Include="Formularios\ProductoVista\frmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Producto\frmProducto.Designer.cs">
+    <Compile Include="Formularios\ProductoVista\frmProducto.Designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -70,10 +70,16 @@
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Producto\abmProducto.resx">
+    <Compile Include="Formularios\VentaVista\frmVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\VentaVista\frmVenta.Designer.cs">
+      <DependentUpon>frmVenta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formularios\ProductoVista\abmProducto.resx">
       <DependentUpon>abmProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Producto\frmProducto.resx">
+    <EmbeddedResource Include="Formularios\ProductoVista\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -90,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\VentaVista\frmVenta.resx">
+      <DependentUpon>frmVenta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

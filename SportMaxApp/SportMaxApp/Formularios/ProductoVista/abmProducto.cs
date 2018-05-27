@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportMaxController.Clases;
 
-namespace SportMaxApp
+namespace SportMaxApp.Formularios.ProductoVista
 {
     public partial class abmProducto : Form
     {
@@ -27,6 +27,7 @@ namespace SportMaxApp
             get { return _padre; }
 
         }
+
         private void abmProducto_Load(object sender, EventArgs e)
         {
             Producto nProd = new Producto();
@@ -36,17 +37,8 @@ namespace SportMaxApp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Producto nProd = new Producto();
-            if (txtBuscar.Text != "" && rbtCodigo.Checked)
-            {
-                gridProductos.DataSource = nProd.BuscarxCodigo(int.Parse(txtBuscar.Text));
-            }
-            else if (txtBuscar.Text != "" && rbtDescrip.Checked)
-            {
-                gridProductos.DataSource = nProd.BuscarxDescripcion(txtBuscar.Text);
-            }
-           
-            
+            TraerDatos();
+                       
         }
 
         private void rbtDescrip_CheckedChanged(object sender, EventArgs e)
@@ -71,6 +63,7 @@ namespace SportMaxApp
             //this.Hide();
 
             frmProd.ShowDialog();
+            TraerDatos();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -79,6 +72,7 @@ namespace SportMaxApp
             //this.Hide();
 
             frmProd.ShowDialog();
+            TraerDatos();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -87,6 +81,23 @@ namespace SportMaxApp
             Padre.Show(); 
         }
 
+        public void TraerDatos()
+        {
+            Producto nProd = new Producto();
+            if (txtBuscar.Text != "" && rbtCodigo.Checked)
+            {
+                gridProductos.DataSource = nProd.BuscarxCodigo(int.Parse(txtBuscar.Text));
+            }
+            else if (txtBuscar.Text != "" && rbtDescrip.Checked)
+            {
+                gridProductos.DataSource = nProd.BuscarxDescripcion(txtBuscar.Text);
+            }
+            else if (txtBuscar.Equals(""))
+            {
+                gridProductos.DataSource = nProd.Listar();
+            }
+        }
+  
 
     }
 }

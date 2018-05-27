@@ -51,19 +51,23 @@ namespace SportMaxController.Clases
 
         }
 
-        public List<Marca> Listar()
+        public List<Marca> ListarMarca()
         {
-            DALMarca dalTProducto = new DALMarca();
-            DataTable tabla = dalTProducto.Listar();
+            DALMarca dalMarca = new DALMarca();
+            DataTable tabla = dalMarca.Listar();
             List<Marca> lista = new List<Marca>();
 
-            Marca pivot;
+            Marca pivot = new Marca();
+            pivot.IdMarca = 0;
+            pivot.Descripcion = "";
+
+            lista.Add(pivot);
 
             foreach (DataRow fila in tabla.Rows)
             {
                 pivot = new Marca();
 
-                pivot.IdMarca  = int.Parse(fila["idTipoProducto"].ToString());
+                pivot.IdMarca  = int.Parse(fila["idMarca"].ToString());
                 pivot.Descripcion = fila["Descripcion"].ToString();
 
                 lista.Add(pivot);

@@ -52,18 +52,21 @@ namespace SportMaxController.Clases
 
        }
 
-       public List<TipoProducto> Listar()
+       public List<TipoProducto> ListarProducto()
        {
            DALTipoProducto dalTProducto = new DALTipoProducto();
            DataTable tabla = dalTProducto.Listar();
            List<TipoProducto> lista = new List<TipoProducto>();
-
-           TipoProducto pivot;
+          
+           TipoProducto pivot = new TipoProducto();
+           pivot.IdTipoProducto = 0;
+           pivot.Descripcion = "";
+           lista.Add(pivot);
 
            foreach (DataRow  fila in tabla.Rows)
            {
                pivot = new TipoProducto();
-
+               
                pivot.IdTipoProducto = int.Parse(fila["idTipoProducto"].ToString());
                pivot.Descripcion = fila["Descripcion"].ToString();
 
@@ -73,6 +76,32 @@ namespace SportMaxController.Clases
            return lista;
        
        }
+
+       public List<Marca> ListarMarca()
+       {
+           DALMarca dalMarca = new DALMarca();
+           DataTable tabla = dalMarca.Listar();
+           List<Marca> lista = new List<Marca>();
+
+           Marca pivot = new Marca();
+           pivot.IdMarca = 0;
+           pivot.Descripcion = "";
+           lista.Add(pivot);
+           
+           foreach (DataRow fila in tabla.Rows)
+           {
+               pivot =  new Marca();
+
+               pivot.IdMarca = int.Parse(fila["IdMarca"].ToString());
+               pivot.Descripcion = fila["Descripcion"].ToString();
+
+               lista.Add(pivot);
+           }
+
+           return lista;
+
+       }
+
 
        #endregion
 

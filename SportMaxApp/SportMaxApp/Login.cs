@@ -28,6 +28,7 @@ namespace SportMaxApp
             {
                 case "ve111": tipoUsuario = "Vendedor"; break;
                 case "pro222": tipoUsuario = "Administrador de Stock"; break;
+                case "admin": tipoUsuario = "Administrador"; break;
                 default: tipoUsuario = "Usuario Inexistente"; break;
             }
 
@@ -40,6 +41,11 @@ namespace SportMaxApp
 
                 //this.Show(); 
 
+            }
+            else
+            {
+                MessageBox.Show("Usuario inexistente");
+            
             }
             
         }

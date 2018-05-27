@@ -1,4 +1,4 @@
-﻿namespace SportMaxApp
+﻿namespace SportMaxApp.Formularios.ProductoVista
 {
     partial class abmProducto
     {
@@ -45,7 +45,7 @@
             this.gridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridProductos.Location = new System.Drawing.Point(25, 68);
             this.gridProductos.Name = "gridProductos";
-            this.gridProductos.Size = new System.Drawing.Size(374, 217);
+            this.gridProductos.Size = new System.Drawing.Size(669, 217);
             this.gridProductos.TabIndex = 0;
             // 
             // btnAgregar
@@ -91,7 +91,7 @@
             // 
             this.rbtCodigo.AutoSize = true;
             this.rbtCodigo.Checked = true;
-            this.rbtCodigo.Location = new System.Drawing.Point(36, 12);
+            this.rbtCodigo.Location = new System.Drawing.Point(178, 12);
             this.rbtCodigo.Name = "rbtCodigo";
             this.rbtCodigo.Size = new System.Drawing.Size(83, 17);
             this.rbtCodigo.TabIndex = 5;
@@ -103,7 +103,7 @@
             // rbtDescrip
             // 
             this.rbtDescrip.AutoSize = true;
-            this.rbtDescrip.Location = new System.Drawing.Point(36, 35);
+            this.rbtDescrip.Location = new System.Drawing.Point(178, 35);
             this.rbtDescrip.Name = "rbtDescrip";
             this.rbtDescrip.Size = new System.Drawing.Size(105, 17);
             this.rbtDescrip.TabIndex = 6;
@@ -114,14 +114,14 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(169, 22);
+            this.txtBuscar.Location = new System.Drawing.Point(311, 22);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(100, 20);
             this.txtBuscar.TabIndex = 7;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(324, 22);
+            this.btnBuscar.Location = new System.Drawing.Point(466, 22);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 8;
@@ -144,6 +144,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gridProductos);
             this.Name = "abmProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMProducto";
             this.Load += new System.EventHandler(this.abmProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).EndInit();

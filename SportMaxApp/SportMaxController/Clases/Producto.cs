@@ -60,14 +60,14 @@ namespace SportMaxController.Clases
        #endregion
 
        #region Metodos
-       public void Agregar()
+       public int Agregar()
        {
 
            DALProducto dalProducto = new DALProducto();
 
            try
            {
-               dalProducto.AgregarProducto(this.Codigo,this.TipoProducto.IdTipoProducto, this.Descripcion,this.Precio,this.Cantidad);
+               return dalProducto.AgregarProducto(this.Codigo,this.TipoProducto.IdTipoProducto, this.Marca.IdMarca, this.Descripcion,this.Precio,this.Cantidad);
            }
            catch (Exception)
            {
@@ -84,19 +84,24 @@ namespace SportMaxController.Clases
            List<Producto> lista = new List<Producto>();
            Producto pivot;
            TipoProducto pivot2;
+           Marca pivot3;
 
            foreach (DataRow fila in tabla.Rows)
            {
                pivot = new Producto();
-               pivot2 = new TipoProducto(); 
+               pivot2 = new TipoProducto();
+               pivot3 = new Marca();
 
                pivot.Codigo = int.Parse(fila["idProducto"].ToString());
-               pivot2.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
-               pivot2.Descripcion = fila["TipoProdDescrip"].ToString();
-               pivot.TipoProducto = pivot2;  
                pivot.Descripcion = fila["Descripcion"].ToString();
                pivot.Precio = float.Parse(fila["Precio"].ToString());
                pivot.Cantidad = int.Parse(fila["Cantidad"].ToString());
+               pivot2.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
+               pivot2.Descripcion = fila["TipoProdDescrip"].ToString();
+               pivot.TipoProducto = pivot2;
+               pivot3.IdMarca = int.Parse(fila["IdTipoProducto"].ToString());
+               pivot3.Descripcion = fila["TipoProdDescrip"].ToString();
+               pivot.Marca = pivot3;  
 
                lista.Add(pivot);
            }
@@ -112,19 +117,24 @@ namespace SportMaxController.Clases
            List<Producto> lista = new List<Producto>();
            Producto pivot;
            TipoProducto pivot2;
+           Marca pivot3;
 
            foreach (DataRow fila in tabla.Rows)
            {
                pivot = new Producto();
                pivot2 = new TipoProducto();
+               pivot3 = new Marca();
 
                pivot.Codigo = int.Parse(fila["idProducto"].ToString());
-               pivot2.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
-               pivot2.Descripcion = fila["TipoProdDescrip"].ToString();
-               pivot.TipoProducto = pivot2;  
                pivot.Descripcion = fila["Descripcion"].ToString();
                pivot.Precio = float.Parse(fila["Precio"].ToString());
                pivot.Cantidad = int.Parse(fila["Cantidad"].ToString());
+               pivot2.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
+               pivot2.Descripcion = fila["TipoProdDescrip"].ToString();
+               pivot.TipoProducto = pivot2;
+               pivot3.IdMarca = int.Parse(fila["IdTipoProducto"].ToString());
+               pivot3.Descripcion = fila["TipoProdDescrip"].ToString();
+               pivot.Marca = pivot3;  
 
                lista.Add(pivot);
            }
@@ -139,24 +149,43 @@ namespace SportMaxController.Clases
            List<Producto> lista = new List<Producto>();
            Producto pivot;
            TipoProducto pivot2;
+           Marca pivot3;
 
            foreach (DataRow fila in tabla.Rows)
            {
                pivot = new Producto();
                pivot2 = new TipoProducto();
+               pivot3 = new Marca();
 
                pivot.Codigo = int.Parse(fila["idProducto"].ToString());
-               pivot2.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
-               pivot2.Descripcion = fila["TipoProdDescrip"].ToString();
-               pivot.TipoProducto = pivot2;  
                pivot.Descripcion = fila["Descripcion"].ToString();
                pivot.Precio = float.Parse(fila["Precio"].ToString());
                pivot.Cantidad = int.Parse(fila["Cantidad"].ToString());
+               pivot2.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
+               pivot2.Descripcion = fila["TipoProdDescrip"].ToString();
+               pivot.TipoProducto = pivot2;
+               pivot3.IdMarca = int.Parse(fila["IdTipoProducto"].ToString());
+               pivot3.Descripcion = fila["TipoProdDescrip"].ToString();
+               pivot.Marca = pivot3;  
 
                lista.Add(pivot);
            }
 
            return lista;
+       }
+
+       public int Modificar()
+       {
+           DALProducto dalProducto = new DALProducto();
+           try
+           {
+               return dalProducto.ModificarProducto(this.Codigo, this.TipoProducto.IdTipoProducto, this.Marca.IdMarca, this.Descripcion, this.Precio, this.Cantidad);
+           }
+           catch (Exception)
+           {
+               
+               throw;
+           }
        }
        #endregion
    }

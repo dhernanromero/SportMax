@@ -13,20 +13,21 @@ namespace SportMaxModel
         Conexion objConexion = new Conexion();
 
         //metodo test 
-        public int AgregarProducto(int iIdProducto, int iIdTipoProducto, string sDescripcion,float mPrecio, int iCantidad)
+        public int AgregarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion,float mPrecio, int iCantidad)
         {
 
 
             //string comandoInsert = "insert into producto(descripcino, id_tipo) values ('" + pDescripcion + "', " + idTipoProducto + ")";
             //return objConexion.EscribirPorComando(comandoInsert);
 
-            SqlParameter[] param = new SqlParameter[5];
+            SqlParameter[] param = new SqlParameter[6];
 
             param[0] = objConexion.crearParametro("@IdProducto", iIdProducto);
             param[1] = objConexion.crearParametro("@IdTipoProducto", iIdTipoProducto);
-            param[2] = objConexion.crearParametro("@Descripcion", sDescripcion);
-            param[3] = objConexion.crearParametro("@Precio", mPrecio);
-            param[4] = objConexion.crearParametro("@Cantidad", iCantidad);
+            param[2] = objConexion.crearParametro("@IdMarca", iIdMarca);
+            param[3] = objConexion.crearParametro("@Descripcion", sDescripcion);
+            param[4] = objConexion.crearParametro("@Precio", mPrecio);
+            param[5] = objConexion.crearParametro("@Cantidad", iCantidad);
 
             try
             {
@@ -52,6 +53,7 @@ namespace SportMaxModel
             {
                 
                 throw;
+             
             }
           
 
@@ -66,7 +68,7 @@ namespace SportMaxModel
             param[0] = objConexion.crearParametro("@IdProducto", Codigo);
             try
             {
-                tabla = objConexion.LeerPorStoreProcedure("Producto_BuscarxCodigo");
+                tabla = objConexion.LeerPorStoreProcedure("Producto_BuscarxCodigo", param);
             }
             catch (Exception)
             {
@@ -86,7 +88,7 @@ namespace SportMaxModel
             param[0] = objConexion.crearParametro("@Descripcion", Descrip);
             try
             {
-                tabla = objConexion.LeerPorStoreProcedure("Producto_BuscarxDescripcion");
+                tabla = objConexion.LeerPorStoreProcedure("Producto_BuscarxDescripcion",param);
             }
             catch (Exception)
             {
@@ -96,6 +98,29 @@ namespace SportMaxModel
 
 
             return tabla;
+        }
+
+        public int ModificarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, float mPrecio, int iCantidad)
+        {
+
+            SqlParameter[] param = new SqlParameter[6];
+
+            param[0] = objConexion.crearParametro("@IdProducto", iIdProducto);
+            param[1] = objConexion.crearParametro("@IdTipoProducto", iIdTipoProducto);
+            param[2] = objConexion.crearParametro("@IdMarca", iIdMarca);
+            param[3] = objConexion.crearParametro("@Descripcion", sDescripcion);
+            param[4] = objConexion.crearParametro("@Precio", mPrecio);
+            param[5] = objConexion.crearParametro("@Cantidad", iCantidad);
+
+            try
+            {
+                return objConexion.EscribirPorStoreProcedure("Producto_Modificar", param);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
