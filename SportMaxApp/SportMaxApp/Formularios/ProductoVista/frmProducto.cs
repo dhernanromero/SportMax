@@ -131,8 +131,8 @@ namespace SportMaxApp.Formularios.ProductoVista
 
             txtCodProducto.Text = lProducto[0].Codigo.ToString();
             txtDescripcion.Text = lProducto[0].Descripcion;
-            cboTipo.SelectedItem = lProducto[0].TipoProducto.IdTipoProducto;
-            cboMarca.SelectedItem = lProducto[0].Marca.IdMarca;
+            cboTipo.SelectedIndex = lProducto[0].TipoProducto.IdTipoProducto;
+            cboMarca.SelectedIndex = lProducto[0].Marca.IdMarca;
             txtPrecio.Text = lProducto[0].Precio.ToString();
             txtCantidad.Text = lProducto[0].Cantidad.ToString(); 
 
