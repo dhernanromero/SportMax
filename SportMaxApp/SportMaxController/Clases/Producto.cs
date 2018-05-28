@@ -188,12 +188,12 @@ namespace SportMaxController.Clases
            }
        }
 
-       public int Eliminar()
+       public int Eliminar(int idProducto)
        {
            DALProducto dalProducto = new DALProducto();
            try
            {
-               return dalProducto.EliminarProducto(this.Codigo);
+               return dalProducto.EliminarProducto(idProducto);
            }
            catch (Exception)
            {

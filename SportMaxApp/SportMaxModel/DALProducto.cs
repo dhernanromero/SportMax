@@ -126,7 +126,7 @@ namespace SportMaxModel
         public int EliminarProducto(int iIdProducto)
         {
             SqlParameter[] param = new SqlParameter[1];
-            param[1] = objConexion.crearParametro("@IdProducto", iIdProducto);
+            param[0] = objConexion.crearParametro("@IdProducto", iIdProducto);
 
             try
             {

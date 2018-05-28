@@ -94,10 +94,27 @@ namespace SportMaxApp.Formularios.ProductoVista
             {
                 gridProductos.DataSource = nProd.BuscarxDescripcion(txtBuscar.Text);
             }
-            else if (txtBuscar.Equals(""))
+            else if (txtBuscar.Text.Equals(""))
             {
                 gridProductos.DataSource = nProd.Listar();
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            Producto Prod = new Producto();
+            int resultado = 0;
+            int idProd = int.Parse(gridProductos.CurrentCell.Value.ToString());
+
+            resultado = Prod.Eliminar(idProd);
+            if(resultado.Equals(1))
+            {
+   
+                MessageBox.Show("Producto Eliminado correctamente");
+                TraerDatos();
+            }
+           
         }
   
 

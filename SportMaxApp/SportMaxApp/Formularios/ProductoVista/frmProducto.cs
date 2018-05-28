@@ -90,8 +90,8 @@ namespace SportMaxApp.Formularios.ProductoVista
             switch(Accion)
             {
                 case "A":
-                    lblCodProducto.Visible = false;
-                    txtCodProducto.Visible = false;
+                    lblCodProducto.Visible = true;
+                    txtCodProducto.Visible = true;
                     break;
                 case "M":
                     lblCodProducto.Visible = true;
@@ -115,8 +115,8 @@ namespace SportMaxApp.Formularios.ProductoVista
         {
             txtCodProducto.Text = "";
             txtDescripcion.Text = "";
-            cboTipo.SelectedItem = 0;
-            cboMarca.SelectedItem = 0;
+            cboTipo.SelectedIndex  = 0;
+            cboMarca.SelectedIndex = 0;
             txtPrecio.Text = "";
             txtCantidad.Text= "";
  
