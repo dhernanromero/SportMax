@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Clases\Marca.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\TipoProducto.cs" />
   </ItemGroup>
