@@ -20,7 +20,7 @@ namespace SportMaxModel
             //string comandoInsert = "insert into producto(descripcino, id_tipo) values ('" + pDescripcion + "', " + idTipoProducto + ")";
             //return objConexion.EscribirPorComando(comandoInsert);
 
-            SqlParameter[] param = new SqlParameter[6];
+            SqlParameter[] param = new SqlParameter[7];
 
             param[0] = objConexion.crearParametro("@IdProducto", iIdProducto);
             param[1] = objConexion.crearParametro("@IdTipoProducto", iIdTipoProducto);
@@ -105,7 +105,7 @@ namespace SportMaxModel
         public int ModificarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, float mPrecio, int iCantidad, bool bEstado)
         {
 
-            SqlParameter[] param = new SqlParameter[6];
+            SqlParameter[] param = new SqlParameter[7];
 
             param[0] = objConexion.crearParametro("@IdProducto", iIdProducto);
             param[1] = objConexion.crearParametro("@IdTipoProducto", iIdTipoProducto);
