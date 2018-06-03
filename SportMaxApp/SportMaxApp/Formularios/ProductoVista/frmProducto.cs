@@ -25,6 +25,13 @@ namespace SportMaxApp.Formularios.ProductoVista
         private string _accion;
         private int _idProd;
 
+        public enum EstadoProducto
+        {
+           Inactivo = 0,
+           Activo = 1
+      
+        }
+
         public Form Padre
         {
             set { _padre = value; }
@@ -52,6 +59,9 @@ namespace SportMaxApp.Formularios.ProductoVista
             nProducto.Marca = (Marca)cboMarca.SelectedItem; 
             nProducto.Precio = float.Parse(txtPrecio.Text);
             nProducto.Cantidad = int.Parse(txtCantidad.Text);
+            nProducto.Talle = txtTalle.Text;
+            nProducto.Estado = (bool)cboEstado.SelectedItem;
+            
 
             if (Accion.Equals("A"))
             {
@@ -87,6 +97,8 @@ namespace SportMaxApp.Formularios.ProductoVista
             cboMarca.DataSource = objMarca.ListarMarca();
             cboMarca.DisplayMember = "Descripcion";
 
+            cboEstado.DataSource = Enum.GetValues(typeof(EstadoProducto));
+            
             switch(Accion)
             {
                 case "A":
