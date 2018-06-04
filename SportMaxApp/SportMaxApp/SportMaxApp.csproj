@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\EmpleadoVista\frmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EmpleadoVista\frmEmpleado.Designer.cs">
+      <DependentUpon>frmEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ProductoVista\abmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +61,12 @@
     </Compile>
     <Compile Include="Formularios\ProductoVista\frmProducto.Designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EmpleadoVista\abmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EmpleadoVista\abmEmpleado.Designer.cs">
+      <DependentUpon>abmEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -76,11 +88,17 @@
     <Compile Include="Formularios\VentaVista\frmVenta.Designer.cs">
       <DependentUpon>frmVenta.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formularios\EmpleadoVista\frmEmpleado.resx">
+      <DependentUpon>frmEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ProductoVista\abmProducto.resx">
       <DependentUpon>abmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ProductoVista\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EmpleadoVista\abmEmpleado.resx">
+      <DependentUpon>abmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -119,6 +137,7 @@
       <Name>SportMaxController</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

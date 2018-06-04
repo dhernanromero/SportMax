@@ -13,17 +13,20 @@ namespace SportMaxApp.Formularios.ProductoVista
 {
     public partial class frmProducto : Form
     {
-        public frmProducto(Form frmPadre, string pAccion, int pIdProducto)
+        //public frmProducto(Form frmPadre, string pAccion, int pIdProducto)
+        public frmProducto(Form frmPadre, string pAccion, Producto pProd)    
         {
             InitializeComponent();
             Padre = frmPadre;
             Accion = pAccion;
-            IdProd = pIdProducto;
+            //IdProd = pIdProducto;
+            Prod = pProd; 
         }
 
         private Form _padre;
         private string _accion;
-        private int _idProd;
+        //private int _Prod;
+        private Producto _Prod;
 
         public enum EstadoProducto
         {
@@ -43,10 +46,15 @@ namespace SportMaxApp.Formularios.ProductoVista
             set { _accion = value; }
             get { return _accion; }
         }
-        public int IdProd
+        //public int IdProd
+        //{
+        //    set { _idProd = value; }
+        //    get { return _idProd; }
+        //}
+        public Producto Prod
         {
-            set { _idProd = value; }
-            get { return _idProd; }
+            set { _Prod = value; }
+            get { return _Prod; }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -60,7 +68,7 @@ namespace SportMaxApp.Formularios.ProductoVista
             nProducto.Precio = float.Parse(txtPrecio.Text);
             nProducto.Cantidad = int.Parse(txtCantidad.Text);
             nProducto.Talle = txtTalle.Text;
-            nProducto.Estado = (bool)cboEstado.SelectedItem;
+            nProducto.Estado = cboEstado.SelectedIndex;
             
 
             if (Accion.Equals("A"))
@@ -131,22 +139,33 @@ namespace SportMaxApp.Formularios.ProductoVista
             cboMarca.SelectedIndex = 0;
             txtPrecio.Text = "";
             txtCantidad.Text= "";
+            txtTalle.Text = "";
  
         }
 
         public void ModProducto()
         {
-            Producto nProd = new Producto();
-            List<Producto> lProducto = new List<Producto>();
+            //Producto nProd = new Producto();
+            //List<Producto> lProducto = new List<Producto>();
             
-            lProducto = nProd.BuscarxCodigo(IdProd);
+            //lProducto = nProd.BuscarxCodigo(IdProd);
 
-            txtCodProducto.Text = lProducto[0].Codigo.ToString();
-            txtDescripcion.Text = lProducto[0].Descripcion;
-            cboTipo.SelectedIndex = lProducto[0].TipoProducto.IdTipoProducto;
-            cboMarca.SelectedIndex = lProducto[0].Marca.IdMarca;
-            txtPrecio.Text = lProducto[0].Precio.ToString();
-            txtCantidad.Text = lProducto[0].Cantidad.ToString(); 
+            //txtCodProducto.Text = lProducto[0].Codigo.ToString();
+            //txtDescripcion.Text = lProducto[0].Descripcion;
+            //cboTipo.SelectedIndex = lProducto[0].TipoProducto.IdTipoProducto;
+            //cboMarca.SelectedIndex = lProducto[0].Marca.IdMarca;
+            //txtPrecio.Text = lProducto[0].Precio.ToString();
+            //txtCantidad.Text = lProducto[0].Cantidad.ToString();
+           
+
+            txtCodProducto.Text = Prod.Codigo.ToString();
+            txtDescripcion.Text = Prod.Descripcion;
+            cboTipo.SelectedIndex = Prod.TipoProducto.IdTipoProducto;
+            cboMarca.SelectedIndex = Prod.Marca.IdMarca;
+            txtPrecio.Text = Prod.Precio.ToString();
+            txtCantidad.Text = Prod.Cantidad.ToString();
+            txtTalle.Text = Prod.Talle;
+            cboEstado.SelectedIndex = Prod.Estado;
 
         }
 

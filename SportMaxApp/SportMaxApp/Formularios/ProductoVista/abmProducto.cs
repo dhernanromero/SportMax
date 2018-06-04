@@ -59,7 +59,7 @@ namespace SportMaxApp.Formularios.ProductoVista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmProducto frmProd = new frmProducto(this, "A",0);
+            frmProducto frmProd = new frmProducto(this, "A",null);
             //this.Hide();
 
             frmProd.ShowDialog();
@@ -68,9 +68,20 @@ namespace SportMaxApp.Formularios.ProductoVista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            int idProd = int.Parse(gridProductos.CurrentCell.Value.ToString());  
- 
-            frmProducto frmProd = new frmProducto(this, "M", idProd);
+            //int idProd = int.Parse(gridProductos.CurrentCell.Value.ToString());
+            Producto Prod = new Producto();
+            var row = gridProductos.CurrentRow;
+
+            Prod.Codigo = int.Parse(row.Cells[0].Value.ToString());
+            Prod.Descripcion = row.Cells[1].Value.ToString();
+            Prod.TipoProducto = (TipoProducto)row.Cells[2].Value;
+            Prod.Precio = float.Parse(row.Cells[3].Value.ToString());
+            Prod.Cantidad = int.Parse(row.Cells[4].Value.ToString());
+            Prod.Marca = (Marca)row.Cells[5].Value;
+            Prod.Estado = int.Parse(row.Cells[6].Value.ToString());
+            Prod.Talle = row.Cells[7].Value.ToString();
+
+            frmProducto frmProd = new frmProducto(this, "M", Prod);
             //this.Hide();
 
             frmProd.ShowDialog();

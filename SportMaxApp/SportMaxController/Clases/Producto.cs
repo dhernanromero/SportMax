@@ -17,7 +17,7 @@ namespace SportMaxController.Clases
        private float _precio;
        private int _cantidad;
        private Marca _marca;
-       private bool _estado;
+       private int _estado;
        private string _talle;
 
        #endregion
@@ -60,7 +60,7 @@ namespace SportMaxController.Clases
            set { _marca = value; }
        }
 
-       public bool Estado
+       public int Estado
        {
            get { return _estado; }
            set { _estado = value; }
@@ -106,7 +106,7 @@ namespace SportMaxController.Clases
                pTipoProducto = new TipoProducto();
                pMarca = new Marca();
                
-               pProducto.Codigo = int.Parse(fila["idProducto"].ToString());
+               pProducto.Codigo = int.Parse(fila["IdProducto"].ToString());
                pProducto.Descripcion = fila["Descripcion"].ToString();
                pProducto.Precio = float.Parse(fila["Precio"].ToString());
                pProducto.Cantidad = int.Parse(fila["Cantidad"].ToString());
@@ -115,11 +115,11 @@ namespace SportMaxController.Clases
                pTipoProducto.Descripcion = fila["TipoProdDescrip"].ToString();
                pProducto.TipoProducto = pTipoProducto;
                
-               pMarca.IdMarca = int.Parse(fila["IdTipoProducto"].ToString());
-               pMarca.Descripcion = fila["TipoProdDescrip"].ToString();
+               pMarca.IdMarca = int.Parse(fila["IdMarca"].ToString());
+               pMarca.Descripcion = fila["MarcaDescrip"].ToString();
                pProducto.Marca = pMarca;
                pProducto.Talle = fila["Talle"].ToString();
-               pProducto.Estado = bool.Parse(fila["Estado"].ToString());
+               pProducto.Estado = int.Parse(fila["Estado"].ToString());
 
                lista.Add(pProducto);
            }
@@ -152,11 +152,11 @@ namespace SportMaxController.Clases
                pTipoProducto.Descripcion = fila["TipoProdDescrip"].ToString();
                pProducto.TipoProducto = pTipoProducto;
 
-               pMarca.IdMarca = int.Parse(fila["IdTipoProducto"].ToString());
-               pMarca.Descripcion = fila["TipoProdDescrip"].ToString();
+               pMarca.IdMarca = int.Parse(fila["IdMarca"].ToString());
+               pMarca.Descripcion = fila["MarcaDescrip"].ToString();
                pProducto.Marca = pMarca;
                pProducto.Talle = fila["Talle"].ToString();
-               pProducto.Estado = bool.Parse(fila["Estado"].ToString());
+               pProducto.Estado = int.Parse(fila["Estado"].ToString());
 
                lista.Add(pProducto);
            }
@@ -188,11 +188,11 @@ namespace SportMaxController.Clases
                pTipoProducto.Descripcion = fila["TipoProdDescrip"].ToString();
                pProducto.TipoProducto = pTipoProducto;
 
-               pMarca.IdMarca = int.Parse(fila["IdTipoProducto"].ToString());
-               pMarca.Descripcion = fila["TipoProdDescrip"].ToString();
+               pMarca.IdMarca = int.Parse(fila["IdMarca"].ToString());
+               pMarca.Descripcion = fila["MarcaDescrip"].ToString();
                pProducto.Marca = pMarca;
                pProducto.Talle = fila["Talle"].ToString();
-               pProducto.Estado = bool.Parse(fila["Estado"].ToString());
+               pProducto.Estado = int.Parse(fila["Estado"].ToString());
 
                lista.Add(pProducto);
            }

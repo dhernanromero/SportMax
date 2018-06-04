@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SportMaxModel;
+using System.Data;
 
 
 namespace SportMaxController.Clases
@@ -12,9 +14,9 @@ namespace SportMaxController.Clases
         #region Propiedades Privadas
         private int _idUsuario;
         private string _usuario;
-       //private string _password;
+        private string _password;
         private TipoUsuario _tipoUsuario;
-        private static readonly Random random = new Random();
+        
         #endregion
 
         #region Propiedades Publicas
@@ -31,11 +33,11 @@ namespace SportMaxController.Clases
             set { _usuario = value; }
         }
 
-        //public string Password
-        //{
-        //    get { return _password; }
-        //    set { _password = value; }
-        //}
+        public string Password
+        {
+            get { return _password; }
+            set { _password = value; }
+        }
 
         public TipoUsuario TipoUsuario
         {
@@ -46,13 +48,47 @@ namespace SportMaxController.Clases
         #endregion
 
         #region Metodos
-        public string IniciarSesion(string sUser, string sPass)
+        public Usuario IniciarSesion(string sUser, string sPass)
         {
-            return "";
+            DALUsuario dalUser = new DALUsuario();
+            DataTable tabal = dalUser.Autenticar(sUser, sPass);
+            List<Usuario> lista = new List<Usuario>();
+            Usuario pUser = new Usuario(); ;
+            TipoUsuario pTipoUsuario;
+
+            foreach (DataRow fila in tabal.Rows)
+            {
+                pUser = new Usuario();
+                pTipoUsuario = new TipoUsuario();
+
+                pUser.IdUsuario = int.Parse(fila["idUsuario"].ToString());
+                pUser.User = fila["Usuario"].ToString();
+                pTipoUsuario.IdTipoUsuario = int.Parse(fila["idTipoUsuario"].ToString());
+                pTipoUsuario.Descripcion = fila["Descripcion"].ToString();
+                pUser.TipoUsuario = pTipoUsuario;
+ 
+                
+            }
+
+            return pUser;
+
+         }
+  
+        public int Agregar()
+        {
+            DALUsuario user = new DALUsuario();
+
+            try 
+	        {
+                return user.AgregarUsuario(this.IdUsuario, this.User, this.Password, this.TipoUsuario.IdTipoUsuario); 
+	        }
+	        catch (Exception)
+	        {
+		
+		        throw;
+	        }
+           
         }
-
-     
-
         #endregion
     }
 }

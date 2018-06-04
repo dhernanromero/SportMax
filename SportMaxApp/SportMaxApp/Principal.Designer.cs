@@ -31,13 +31,14 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(177, 196);
+            this.btnSalir.Location = new System.Drawing.Point(378, 228);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(108, 47);
+            this.btnSalir.Size = new System.Drawing.Size(66, 25);
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -45,7 +46,7 @@
             // 
             // btnProducto
             // 
-            this.btnProducto.Location = new System.Drawing.Point(89, 69);
+            this.btnProducto.Location = new System.Drawing.Point(72, 40);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(99, 55);
             this.btnProducto.TabIndex = 3;
@@ -56,7 +57,7 @@
             // 
             // btnVentas
             // 
-            this.btnVentas.Location = new System.Drawing.Point(294, 69);
+            this.btnVentas.Location = new System.Drawing.Point(280, 40);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(105, 55);
             this.btnVentas.TabIndex = 4;
@@ -64,11 +65,22 @@
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Visible = false;
             // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Location = new System.Drawing.Point(72, 142);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(99, 55);
+            this.btnUsuarios.TabIndex = 5;
+            this.btnUsuarios.Text = "Empleados";
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 283);
+            this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.btnSalir);
@@ -85,5 +97,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnVentas;
+        private System.Windows.Forms.Button btnUsuarios;
     }
 }

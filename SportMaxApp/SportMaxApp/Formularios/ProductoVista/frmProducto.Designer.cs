@@ -44,13 +44,17 @@
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.lblTalle = new System.Windows.Forms.Label();
             this.txtTalle = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.LblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(107, 214);
+            this.btnAceptar.Location = new System.Drawing.Point(117, 260);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 0;
@@ -94,7 +98,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(238, 214);
+            this.btnCancelar.Location = new System.Drawing.Point(223, 260);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -184,17 +188,18 @@
             this.txtTalle.Size = new System.Drawing.Size(64, 20);
             this.txtTalle.TabIndex = 14;
             // 
-            // label1
+            // lblEstado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(204, 152);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Estado:";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(204, 152);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(43, 13);
+            this.lblEstado.TabIndex = 15;
+            this.lblEstado.Text = "Estado:";
             // 
             // cboEstado
             // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.FormattingEnabled = true;
             this.cboEstado.Items.AddRange(new object[] {
             "Activo",
@@ -204,13 +209,49 @@
             this.cboEstado.Size = new System.Drawing.Size(121, 21);
             this.cboEstado.TabIndex = 16;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 198);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Usuario:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(74, 195);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.TabIndex = 18;
+            // 
+            // LblPassword
+            // 
+            this.LblPassword.AutoSize = true;
+            this.LblPassword.Location = new System.Drawing.Point(210, 199);
+            this.LblPassword.Name = "LblPassword";
+            this.LblPassword.Size = new System.Drawing.Size(64, 13);
+            this.LblPassword.TabIndex = 19;
+            this.LblPassword.Text = "Contraseña:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(286, 191);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(121, 20);
+            this.txtPassword.TabIndex = 20;
+            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 269);
+            this.ClientSize = new System.Drawing.Size(429, 309);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.LblPassword);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cboEstado);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.txtTalle);
             this.Controls.Add(this.lblTalle);
             this.Controls.Add(this.cboMarca);
@@ -254,7 +295,11 @@
         private System.Windows.Forms.ComboBox cboMarca;
         private System.Windows.Forms.Label lblTalle;
         private System.Windows.Forms.TextBox txtTalle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label LblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

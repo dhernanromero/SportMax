@@ -13,20 +13,20 @@ namespace SportMaxModel
         Conexion objConexion = new Conexion();
 
         //metodo test 
-        public int AgregarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, float mPrecio, int iCantidad, bool bEstado)
+        public int AgregarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, float mPrecio, int iCantidad, int bEstado)
         {
 
 
             //string comandoInsert = "insert into producto(descripcino, id_tipo) values ('" + pDescripcion + "', " + idTipoProducto + ")";
             //return objConexion.EscribirPorComando(comandoInsert);
 
-            SqlParameter[] param = new SqlParameter[7];
+            SqlParameter[] param = new SqlParameter[8];
 
             param[0] = objConexion.crearParametro("@IdProducto", iIdProducto);
             param[1] = objConexion.crearParametro("@IdTipoProducto", iIdTipoProducto);
             param[2] = objConexion.crearParametro("@IdMarca", iIdMarca);
             param[3] = objConexion.crearParametro("@Descripcion", sDescripcion);
-            param[4] = objConexion.crearParametro("@Talla", sTalla);
+            param[4] = objConexion.crearParametro("@Talle", sTalla);
             param[5] = objConexion.crearParametro("@Precio", mPrecio);
             param[6] = objConexion.crearParametro("@Cantidad", iCantidad);
             param[7] = objConexion.crearParametro("@Estado",bEstado);
@@ -102,16 +102,16 @@ namespace SportMaxModel
             return tabla;
         }
 
-        public int ModificarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, float mPrecio, int iCantidad, bool bEstado)
+        public int ModificarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, float mPrecio, int iCantidad, int bEstado)
         {
 
-            SqlParameter[] param = new SqlParameter[7];
+            SqlParameter[] param = new SqlParameter[8];
 
             param[0] = objConexion.crearParametro("@IdProducto", iIdProducto);
             param[1] = objConexion.crearParametro("@IdTipoProducto", iIdTipoProducto);
             param[2] = objConexion.crearParametro("@IdMarca", iIdMarca);
             param[3] = objConexion.crearParametro("@Descripcion", sDescripcion);
-            param[4] = objConexion.crearParametro("@Talla", sTalla);
+            param[4] = objConexion.crearParametro("@Talle", sTalla);
             param[5] = objConexion.crearParametro("@Precio", mPrecio);
             param[6] = objConexion.crearParametro("@Cantidad", iCantidad);
             param[7] = objConexion.crearParametro("@Estado", bEstado);

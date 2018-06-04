@@ -31,3 +31,5 @@ C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\Sport
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.Venta.frmVenta.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ProductoVista.abmProducto.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ProductoVista.frmProducto.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.EmpleadoVista.frmEmpleado.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.EmpleadoVista.abmEmpleado.resources

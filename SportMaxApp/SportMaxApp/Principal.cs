@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportMaxApp.Formularios.ProductoVista;
-using SportMaxApp.Formularios.Venta; 
+using SportMaxApp.Formularios.Venta;
+using SportMaxApp.Formularios.EmpleadoVista; 
 
 namespace SportMaxApp
 {
@@ -58,6 +59,13 @@ namespace SportMaxApp
             this.Hide();
             abmProd.ShowDialog();
             //abmProd.Show();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            abmEmpleado abmEmpleado = new abmEmpleado(this);
+            this.Hide();
+            abmEmpleado.ShowDialog();
         }
     }
 }
