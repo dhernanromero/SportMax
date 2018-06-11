@@ -19,7 +19,7 @@ namespace SportMaxController.Clases
        private Marca _marca;
        private int _estado;
        private string _talle;
-
+       
        #endregion
 
        #region Variables Publicas

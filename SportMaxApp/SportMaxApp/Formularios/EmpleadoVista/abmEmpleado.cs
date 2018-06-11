@@ -37,9 +37,9 @@ namespace SportMaxApp.Formularios.EmpleadoVista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //frmEmpleado frmEnp = new frmEmpleado(this, "A",0);
+            frmEmpleado frmEnp = new frmEmpleado(this, "A",null);
 
-            //frmEmp.ShowDialog();
+            frmEnp.ShowDialog();
 
 
         }

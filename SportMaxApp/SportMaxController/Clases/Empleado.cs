@@ -8,18 +8,13 @@ using System.Data;
 
 namespace SportMaxController.Clases
 {
-    public class Empleado
+    public class Empleado : Persona
     {
 
         #region Propiedades Privadas 
         private int _IdEmpleado;
         private Usuario _usuario;
         private string _legajo;
-        private string _nombre;
-        private string _apellido;
-        private int _dni;
-        private string _direccion;
-        private int _telefono;
         private int _estado;
         private decimal _sueldo;
         #endregion  
@@ -44,36 +39,6 @@ namespace SportMaxController.Clases
             set { _legajo = value; }
         }
 
-        public string Nombre
-        {
-            get { return _nombre; }
-            set { _nombre = value; }
-        }
-
-        public string Apellido
-        {
-            get { return _apellido; }
-            set { _apellido = value; }
-        }
-
-        public int  DNI
-        {
-            get { return _dni; }
-            set { _dni = value; }
-        }
-
-        public string Direccion
-        {
-            get { return _direccion; }
-            set { _direccion = value; }
-        }
-
-        public int Telefono
-        {
-            get { return _telefono; }
-            set { _telefono = value; }
-        }
-
         public int Estado
         {
             get { return _estado; }
@@ -96,7 +61,7 @@ namespace SportMaxController.Clases
 
             try
             {
-                return dalEmpleado.AgregarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo, this.Nombre, this.Apellido, this.DNI, this.Direccion, this.Telefono, this.Estado, this.Sueldo);
+                return dalEmpleado.AgregarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo, this.Nombre, this.Apellido, this.DNI,this.FechaNacimiento, this.Direccion, this.Telefono, this.Estado, this.Sueldo);
             }
             catch (Exception)
             {
@@ -125,6 +90,7 @@ namespace SportMaxController.Clases
                 nEmpleado.Nombre = fila["Nombre"].ToString();
                 nEmpleado.Apellido = fila["Apellido"].ToString();
                 nEmpleado.DNI = int.Parse(fila["DNI"].ToString());
+                nEmpleado.FechaNacimiento = DateTime.Parse(fila["FechaNacimiento"].ToString());
                 nEmpleado.Direccion = fila["Direccion"].ToString();
                 nEmpleado.Telefono = int.Parse(fila["Telefono"].ToString());
                 nEmpleado.Estado = int.Parse(fila["Estado"].ToString());

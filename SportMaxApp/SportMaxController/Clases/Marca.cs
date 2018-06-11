@@ -33,6 +33,12 @@ namespace SportMaxController.Clases
 
         #endregion
 
+        public override string ToString()
+        {
+            return this.Descripcion; 
+ 
+        }
+
         #region Metodos
         //test
         public void AgregarMarca()

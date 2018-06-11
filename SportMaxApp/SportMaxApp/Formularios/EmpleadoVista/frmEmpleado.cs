@@ -13,20 +13,20 @@ namespace SportMaxApp.Formularios.EmpleadoVista
 {
     public partial class frmEmpleado : Form
     {
-        public frmEmpleado(Form frmPadre, string pAccion, Empleado pEmp)
+        public frmEmpleado(Form frmPadre, string pAccion, Empleado pEmp = null) 
         {
             InitializeComponent();
             Padre = frmPadre;
             Accion = pAccion;
-            //IdProd = pIdProducto;
+        
             Empl = pEmp; 
         }
+
         private Form _padre;
         private string _accion;
-        //private int _Prod;
         private Empleado _Empl;
 
-        public enum EstadoProducto
+        public enum EstadoUsuario
         {
             Inactivo = 0,
             Activo = 1
@@ -44,11 +44,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             set { _accion = value; }
             get { return _accion; }
         }
-        //public int IdProd
-        //{
-        //    set { _idProd = value; }
-        //    get { return _idProd; }
-        //}
+  
         public Empleado Empl
         {
             set { _Empl = value; }
@@ -68,26 +64,35 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             int resEmpleado = 0;
             int resUsuario = 0;
             Empleado nEmpleado = new Empleado();
+            Usuario nUsers = new Usuario();
+            TipoUsuario nTipoUser = new TipoUsuario();
+
             nEmpleado.IdEmpleado = 1;
             nEmpleado.Legajo = txtLegajo.Text;
             nEmpleado.Nombre = txtNombre.Text;
             nEmpleado.Apellido = txtApellido.Text;
             nEmpleado.DNI = int.Parse(txtDNI.Text);
+            nEmpleado.FechaNacimiento = dtpFechaNac.Value; 
             nEmpleado.Direccion = txtDireccion.Text;
             nEmpleado.Telefono = int.Parse(txtTelefono.Text);
             nEmpleado.Estado = cboEstado.SelectedIndex;
             nEmpleado.Sueldo = decimal.Parse(txtSueldo.Text);
-            nEmpleado.Usuario.User = txtUsuario.Text;
-            nEmpleado.Usuario.Password = txtPass.Text;
-            nEmpleado.Usuario.TipoUsuario.IdTipoUsuario = cboTipoUsuario.SelectedIndex;
+
+            nUsers.IdUsuario = 1;
+            nUsers.User = txtUsuario.Text;
+            nUsers.Password = txtPass.Text;
+            nTipoUser.IdTipoUsuario = cboTipoUsuario.SelectedIndex;
+            nUsers.TipoUsuario = nTipoUser; 
+            nEmpleado.Usuario = nUsers;
 
 
             try
             {
                 if (Accion.Equals("A"))
                 {
-                     resEmpleado = nEmpleado.Agregar();
                      resUsuario = nEmpleado.Usuario.Agregar();
+                     resEmpleado = nEmpleado.Agregar();
+                     
                 }
                 else if (Accion.Equals("M"))
                 {
@@ -98,7 +103,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
                 if (resEmpleado.Equals(1) && resUsuario.Equals(1))
                 {
                     MessageBox.Show("Empleado agregado correctamente");
-                    //Limpiar();
+                    Limpiar();
                
                 }
                 else
@@ -107,13 +112,40 @@ namespace SportMaxApp.Formularios.EmpleadoVista
                 }
               
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                throw;
+                MessageBox.Show(ex.Message);
+                //throw;
             }
 
  
+        }
+
+        private void frmEmpleado_Load(object sender, EventArgs e)
+        {
+            TipoUsuario objTipoUsuario = new TipoUsuario();
+            cboTipoUsuario.DataSource = objTipoUsuario.ListarTipoUsuario();
+            cboTipoUsuario.DisplayMember = "Descripcion";
+
+            cboEstado.DataSource = Enum.GetValues(typeof(EstadoUsuario));
+        }
+
+        private void Limpiar()
+        {
+            txtLegajo.Text = "";
+            txtDNI.Text = "";
+            cboEstado.SelectedIndex = 0;
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            dtpFechaNac.Value = DateTime.Now;
+            txtUsuario.Text = "";
+            txtPass.Text = "";
+            txtSueldo.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
+            cboEstado.SelectedIndex = 0;
+
+            txtLegajo.Focus();
         }
 
     }

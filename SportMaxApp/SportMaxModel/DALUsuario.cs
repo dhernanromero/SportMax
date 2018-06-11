@@ -41,28 +41,38 @@ namespace SportMaxModel
             byte[] inputBytes = (new UnicodeEncoding()).GetBytes(originalPassword);
             byte[] hash = sha1.ComputeHash(inputBytes);
 
-            return Convert.ToString(hash);
+            return Convert.ToBase64String(hash);
         }
 
         public int AgregarUsuario(int iIdUsuario, string sUsuario, string sPass, int iTipoUsuario)
         {
-            SqlParameter[] param = new SqlParameter[4];
+            SqlParameter[] param = new SqlParameter[3];
             string hash = EncodePassword(string.Concat(sUsuario, sPass));
 
-            param[0] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
-            param[1] = objConexion.crearParametro("@Usuario", sUsuario);
-            param[2] = objConexion.crearParametro("@Password", hash);
-            param[3] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
+            //param[0] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
+            //param[1] = objConexion.crearParametro("@Usuario", sUsuario);
+            //param[2] = objConexion.crearParametro("@Pass", hash);
+            //param[3] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
+
+            param[0] = objConexion.crearParametro("@Usuario", sUsuario);
+            param[1] = objConexion.crearParametro("@Pass", hash);
+            param[2] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
 
             try
             {
                 return objConexion.EscribirPorStoreProcedure("Usuario_Insertar", param); 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
+                return ex.HResult; 
                 throw;
             }
+        }
+
+        public int ObtenerId()
+        {
+  
+
         }
     }
 }

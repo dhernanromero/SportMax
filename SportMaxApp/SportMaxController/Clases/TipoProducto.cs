@@ -34,6 +34,12 @@ namespace SportMaxController.Clases
 
        #endregion
 
+       public override string ToString()
+       {
+           return this.Descripcion;
+
+       }
+
        #region Metodos
        //test
        public void AgregarTipoProducto()
@@ -76,32 +82,6 @@ namespace SportMaxController.Clases
            return lista;
        
        }
-
-       public List<Marca> ListarMarca()
-       {
-           DALMarca dalMarca = new DALMarca();
-           DataTable tabla = dalMarca.Listar();
-           List<Marca> lista = new List<Marca>();
-
-           Marca pivot = new Marca();
-           pivot.IdMarca = 0;
-           pivot.Descripcion = "";
-           lista.Add(pivot);
-           
-           foreach (DataRow fila in tabla.Rows)
-           {
-               pivot =  new Marca();
-
-               pivot.IdMarca = int.Parse(fila["IdMarca"].ToString());
-               pivot.Descripcion = fila["Descripcion"].ToString();
-
-               lista.Add(pivot);
-           }
-
-           return lista;
-
-       }
-
 
        #endregion
 

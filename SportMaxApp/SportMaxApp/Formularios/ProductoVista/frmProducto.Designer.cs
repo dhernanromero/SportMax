@@ -46,15 +46,11 @@
             this.txtTalle = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.LblPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(117, 260);
+            this.btnAceptar.Location = new System.Drawing.Point(117, 209);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 0;
@@ -98,7 +94,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(223, 260);
+            this.btnCancelar.Location = new System.Drawing.Point(224, 209);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -209,47 +205,11 @@
             this.cboEstado.Size = new System.Drawing.Size(121, 21);
             this.cboEstado.TabIndex = 16;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 198);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Usuario:";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(74, 195);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 18;
-            // 
-            // LblPassword
-            // 
-            this.LblPassword.AutoSize = true;
-            this.LblPassword.Location = new System.Drawing.Point(210, 199);
-            this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(64, 13);
-            this.LblPassword.TabIndex = 19;
-            this.LblPassword.Text = "Contraseña:";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(286, 191);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(121, 20);
-            this.txtPassword.TabIndex = 20;
-            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 309);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.LblPassword);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(429, 250);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.txtTalle);
@@ -297,9 +257,5 @@
         private System.Windows.Forms.TextBox txtTalle;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.ComboBox cboEstado;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label LblPassword;
-        private System.Windows.Forms.TextBox txtPassword;
     }
 }
