@@ -43,5 +43,11 @@ namespace SportMaxApp.Formularios.EmpleadoVista
 
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Padre.Show(); 
+        }
     }
 }

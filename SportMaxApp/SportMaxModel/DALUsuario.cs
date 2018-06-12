@@ -69,10 +69,10 @@ namespace SportMaxModel
             }
         }
 
-        public int ObtenerId()
-        {
+        //public int ObtenerId()
+        //{
   
 
-        }
+        //}
     }
 }
