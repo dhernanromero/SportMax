@@ -218,6 +218,10 @@ namespace SportMaxModel
 
             return filasAfectadas;
         }
+        public int ObtenerPorStoredProcedure(string pTexto, SqlParameter[] pParametrosSql)
+        { 
+        
+        }
 
         #region Parametros
         public SqlParameter crearParametro(string pNombre, string pValor)
