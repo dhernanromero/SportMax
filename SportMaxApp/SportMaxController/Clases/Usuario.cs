@@ -53,7 +53,7 @@ namespace SportMaxController.Clases
             DALUsuario dalUser = new DALUsuario();
             DataTable tabal = dalUser.Autenticar(sUser, sPass);
             List<Usuario> lista = new List<Usuario>();
-            Usuario pUser = new Usuario(); ;
+            Usuario pUser = new Usuario();
             TipoUsuario pTipoUsuario;
 
             foreach (DataRow fila in tabal.Rows)
@@ -65,8 +65,8 @@ namespace SportMaxController.Clases
                 pUser.User = fila["Usuario"].ToString();
                 pTipoUsuario.IdTipoUsuario = int.Parse(fila["idTipoUsuario"].ToString());
                 pTipoUsuario.Descripcion = fila["Descripcion"].ToString();
+                pTipoUsuario.CodUsuario = fila["CodUsuario"].ToString();
                 pUser.TipoUsuario = pTipoUsuario;
- 
                 
             }
 
@@ -88,6 +88,12 @@ namespace SportMaxController.Clases
 		        throw;
 	        }
            
+        }
+
+        public int ObtenerId()
+        {
+           
+
         }
         #endregion
     }

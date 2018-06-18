@@ -67,7 +67,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             Usuario nUsers = new Usuario();
             TipoUsuario nTipoUser = new TipoUsuario();
 
-            nEmpleado.IdEmpleado = 1;
+            nEmpleado.IdEmpleado = nEmpleado.ObtenerId();
             nEmpleado.Legajo = txtLegajo.Text;
             nEmpleado.Nombre = txtNombre.Text;
             nEmpleado.Apellido = txtApellido.Text;
@@ -78,7 +78,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             nEmpleado.Estado = cboEstado.SelectedIndex;
             nEmpleado.Sueldo = decimal.Parse(txtSueldo.Text);
 
-            nUsers.IdUsuario = 1;
+            nUsers.IdUsuario = nUsers.ObtenerId();
             nUsers.User = txtUsuario.Text;
             nUsers.Password = txtPass.Text;
             nTipoUser.IdTipoUsuario = cboTipoUsuario.SelectedIndex;

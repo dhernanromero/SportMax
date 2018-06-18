@@ -15,18 +15,24 @@ namespace SportMaxApp
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal(Form frmPadre)
+        public frmPrincipal(Form frmPadre, string usuario)
         {
             InitializeComponent();
             Padre = frmPadre;
         }
         private Form _padre;
+        private string _usuario;
 
         public Form Padre
         {
             set { _padre = value; }
             get { return _padre; }
 
+        }
+        public string Usuario
+        {
+            set { _usuario = value; }
+            get { return _usuario; }
         }
 
         public frmPrincipal(string tipoUsuario)
@@ -44,7 +50,7 @@ namespace SportMaxApp
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
-            //Padre.Close();
+            Padre.Close();
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -66,6 +72,12 @@ namespace SportMaxApp
             abmEmpleado abmEmpleado = new abmEmpleado(this);
             this.Hide();
             abmEmpleado.ShowDialog();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Padre.Show();
         }
     }
 }

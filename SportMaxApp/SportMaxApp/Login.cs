@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SportMaxController.Clases;
 
 
 namespace SportMaxApp
@@ -20,10 +21,14 @@ namespace SportMaxApp
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text;
+            string user = txtUsuario.Text;
             string pass = txtContraseña.Text;
             string tipoUsuario;
 
+            Usuario Usuario = new Usuario();
+
+            Usuario.IniciarSesion(user, pass);
+            
             switch (pass)
             {
                 case "ve111": tipoUsuario = "Vendedor"; break;
@@ -34,7 +39,7 @@ namespace SportMaxApp
 
             if (tipoUsuario != "Usuario Inexistente")
             {
-                frmPrincipal Principal = new frmPrincipal(tipoUsuario);
+                frmPrincipal Principal = new frmPrincipal(this,user);
 
                 this.Hide();
                 Principal.ShowDialog();

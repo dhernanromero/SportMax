@@ -20,7 +20,7 @@ namespace SportMaxModel
             SqlParameter[] param = new SqlParameter[2];
 
             param[0] = objConexion.crearParametro("@Usuario",sUsuario);
-            param[1] = objConexion.crearParametro("@Password", hash);
+            param[1] = objConexion.crearParametro("@Pass", hash);
 
             try
             {
@@ -47,8 +47,7 @@ namespace SportMaxModel
         public int AgregarUsuario(int iIdUsuario, string sUsuario, string sPass, int iTipoUsuario)
         {
             SqlParameter[] param = new SqlParameter[3];
-            string hash = EncodePassword(string.Concat(sUsuario, sPass));
-
+            string hash = EncodePassword(string.Concat(sUsuario, sPass)); 
             //param[0] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
             //param[1] = objConexion.crearParametro("@Usuario", sUsuario);
             //param[2] = objConexion.crearParametro("@Pass", hash);

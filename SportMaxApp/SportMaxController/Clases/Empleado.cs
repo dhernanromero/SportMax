@@ -105,6 +105,12 @@ namespace SportMaxController.Clases
                         
         }
 
+        public int ObtenerId()
+        {
+          
+
+        }
+
         #endregion
 
     }

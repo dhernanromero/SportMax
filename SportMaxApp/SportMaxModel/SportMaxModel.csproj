@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="DALDefinicionesGenerales.cs" />
     <Compile Include="DALEmpleado.cs" />
     <Compile Include="DALMarca.cs" />
     <Compile Include="DALProducto.cs" />
