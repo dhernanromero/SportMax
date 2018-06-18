@@ -92,7 +92,16 @@ namespace SportMaxController.Clases
 
         public int ObtenerId()
         {
-           
+            DALUsuario user = new DALUsuario();
+            try
+            {
+                return user.ObtenerId();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
 
         }
         #endregion

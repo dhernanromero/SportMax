@@ -107,7 +107,16 @@ namespace SportMaxController.Clases
 
         public int ObtenerId()
         {
-          
+            DALEmpleado empl = new DALEmpleado();
+            try
+            {
+                return empl.ObtenerId();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
 

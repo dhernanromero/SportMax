@@ -68,10 +68,28 @@ namespace SportMaxModel
             }
         }
 
-        //public int ObtenerId()
-        //{
-  
+        public int ObtenerId()
+        {
+            DataTable tabla = new DataTable();
+            int id;
+            try
+            {
+                tabla = objConexion.LeerPorStoreProcedure("Usuario_ObtenerId");
+                foreach (DataRow fila in tabla.Rows)
+                {
+                   return  id =int.Parse(fila["idUsuario"].ToString()); 
 
-        //}
+                }
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
+            return -1; 
+
+        }
+                
     }
 }

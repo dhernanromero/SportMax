@@ -57,6 +57,27 @@ namespace SportMaxModel
             return tabla;
         }
 
-        public string dSueldo { get; set; }
+        public int ObtenerId()
+        {
+            DataTable tabla = new DataTable();
+            int id;
+            try
+            {
+                tabla = objConexion.LeerPorStoreProcedure("Empleado_ObtenerId");
+                foreach (DataRow fila in tabla.Rows)
+                {
+                    return id = int.Parse(fila["idEmpleado"].ToString());
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return -1;
+
+        }
     }
 }
