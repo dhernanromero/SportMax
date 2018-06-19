@@ -12,9 +12,9 @@ namespace SportMaxModel
     {
         Conexion objConexion = new Conexion();
 
-        public int AgregarEmpleado(int iIdEmpleado, int iIdUsuario, string sLegajo, string sNombre, string sApellido, int iDni, DateTime dFechaNacimiento, string sDireccion, int iTelefono, int bEstado, decimal dSueldo, string sUsuario)
+        public int AgregarEmpleado(int iIdEmpleado, int iIdUsuario, string sLegajo, string sNombre, string sApellido, int iDni, DateTime dFechaNacimiento, string sDireccion, int iTelefono, int bEstado, decimal dSueldo)
         {
-            SqlParameter[] param = new SqlParameter[12];
+            SqlParameter[] param = new SqlParameter[11];
 
             param[0] = objConexion.crearParametro("@IdEmpleado", iIdEmpleado);
             param[1] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
@@ -27,7 +27,7 @@ namespace SportMaxModel
             param[8] = objConexion.crearParametro("@Telefono", iTelefono);
             param[9] = objConexion.crearParametro("@Estado", bEstado);
             param[10] = objConexion.crearParametro("@Sueldo", dSueldo.ToString());
-            param[11] = objConexion.crearParametro("@Usuario", sUsuario);
+            //param[11] = objConexion.crearParametro("@Usuario", sUsuario);
 
             try
             {

@@ -23,26 +23,26 @@ namespace SportMaxApp
         {
             string user = txtUsuario.Text;
             string pass = txtContraseña.Text;
-            string tipoUsuario;
 
             Usuario Usuario = new Usuario();
-
-            Usuario.IniciarSesion(user, pass);
+            Usuario nUsuario = new Usuario();
+            nUsuario = Usuario.IniciarSesion(user, pass);
             
-            switch (pass)
-            {
-                case "ve111": tipoUsuario = "Vendedor"; break;
-                case "pro222": tipoUsuario = "Administrador de Stock"; break;
-                case "admin": tipoUsuario = "Administrador"; break;
-                default: tipoUsuario = "Usuario Inexistente"; break;
-            }
+            //switch (pass)
+            //{
+            //    case "ve111": tipoUsuario = "Vendedor"; break;
+            //    case "pro222": tipoUsuario = "Administrador de Stock"; break;
+            //    case "admin": tipoUsuario = "Administrador"; break;
+            //    default: tipoUsuario = "Usuario Inexistente"; break;
+            //}
 
-            if (tipoUsuario != "Usuario Inexistente")
+            if (nUsuario.TipoUsuario.IdTipoUsuario > 0)
             {
-                frmPrincipal Principal = new frmPrincipal(this,user);
+                frmPrincipal Principal = new frmPrincipal(this,nUsuario);
 
                 this.Hide();
-                Principal.ShowDialog();
+                this.Limpiar();
+                Principal.Show();
 
                 //this.Show(); 
 
@@ -57,12 +57,18 @@ namespace SportMaxApp
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txtContraseña.Text = "";  
+            Limpiar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        public void Limpiar()
+        {
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
         }
     }
 }

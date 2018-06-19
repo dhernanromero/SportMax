@@ -96,7 +96,8 @@ namespace SportMaxApp.Formularios.EmpleadoVista
                 }
                 else if (Accion.Equals("M"))
                 {
-                   
+                    //resUsuario = nEmpleado.Usuario.Modificar();
+                    //resEmpleado = nEmpleado.Modificar();
                 }
 
 

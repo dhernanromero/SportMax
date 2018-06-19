@@ -71,6 +71,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gridEmpleados);
             this.Name = "abmEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "abmEmpleado";
             this.Load += new System.EventHandler(this.abmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridEmpleados)).EndInit();

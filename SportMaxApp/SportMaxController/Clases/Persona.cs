@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportMaxController.Clases
 {
-    public class Persona
+    public abstract class Persona
     {
         #region Propiedades Privadas
         private string _nombre;

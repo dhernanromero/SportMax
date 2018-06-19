@@ -61,7 +61,7 @@ namespace SportMaxController.Clases
 
             try
             {
-                return dalEmpleado.AgregarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo, this.Nombre, this.Apellido, this.DNI,this.FechaNacimiento, this.Direccion, this.Telefono, this.Estado, this.Sueldo, this.Usuario.User);
+                return dalEmpleado.AgregarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo, this.Nombre, this.Apellido, this.DNI,this.FechaNacimiento, this.Direccion, this.Telefono, this.Estado, this.Sueldo);
             }
             catch (Exception)
             {

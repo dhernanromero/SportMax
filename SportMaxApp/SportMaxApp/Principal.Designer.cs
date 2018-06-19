@@ -31,7 +31,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -66,15 +66,15 @@
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Visible = false;
             // 
-            // btnUsuarios
+            // btnEmpleado
             // 
-            this.btnUsuarios.Location = new System.Drawing.Point(72, 142);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(99, 55);
-            this.btnUsuarios.TabIndex = 5;
-            this.btnUsuarios.Text = "Empleados";
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            this.btnEmpleado.Location = new System.Drawing.Point(72, 142);
+            this.btnEmpleado.Name = "btnEmpleado";
+            this.btnEmpleado.Size = new System.Drawing.Size(99, 55);
+            this.btnEmpleado.TabIndex = 5;
+            this.btnEmpleado.Text = "Empleados";
+            this.btnEmpleado.UseVisualStyleBackColor = true;
+            this.btnEmpleado.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnCerrarSesion
             // 
@@ -92,7 +92,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 283);
             this.Controls.Add(this.btnCerrarSesion);
-            this.Controls.Add(this.btnUsuarios);
+            this.Controls.Add(this.btnEmpleado);
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.btnSalir);
@@ -109,7 +109,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button btnEmpleado;
         private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

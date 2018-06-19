@@ -9,19 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportMaxApp.Formularios.ProductoVista;
 using SportMaxApp.Formularios.Venta;
-using SportMaxApp.Formularios.EmpleadoVista; 
+using SportMaxApp.Formularios.EmpleadoVista;
+using SportMaxController.Clases;
 
 namespace SportMaxApp
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal(Form frmPadre, string usuario)
+        public frmPrincipal(Form frmPadre, Usuario user)
         {
             InitializeComponent();
             Padre = frmPadre;
+            Usuario = user;
+
         }
+
         private Form _padre;
-        private string _usuario;
+        private Usuario _usuario;
 
         public Form Padre
         {
@@ -29,23 +33,25 @@ namespace SportMaxApp
             get { return _padre; }
 
         }
-        public string Usuario
+        public Usuario Usuario
         {
             set { _usuario = value; }
             get { return _usuario; }
         }
 
-        public frmPrincipal(string tipoUsuario)
-        {
-            InitializeComponent();
+        //public frmPrincipal()
+        //{
+        //    InitializeComponent();
 
-            switch (tipoUsuario)
-            {
-                case "Vendedor": btnVentas.Visible = true; break;
-                case "Administrador de Stock": btnProducto.Visible = true; break;
-                case "Administrador": btnProducto.Visible = true; btnVentas.Visible = true; break;    
-            }
-        }
+        //    switch (Usuario.TipoUsuario.CodUsuario)
+        //    {
+        //        case "ADMIN": btnVentas.Visible = true; btnProducto.Visible = true; btnEmpleado.Visible = true; break;
+        //        case "GEREN": btnProducto.Visible = true; break;
+        //        case "VENDE": btnVentas.Visible = true; break;
+        //        case "STOCK": btnProducto.Visible = true; break;
+        //        case "SISTE": btnProducto.Visible = true; btnVentas.Visible = true; break;
+        //    }
+        //}
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -55,7 +61,14 @@ namespace SportMaxApp
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+            switch (Usuario.TipoUsuario.CodUsuario)
+            {
+                case "ADMIN": btnVentas.Visible = true; btnProducto.Visible = true; btnEmpleado.Visible = true; break;
+                case "GEREN": btnProducto.Visible = true; break;
+                case "VENDE": btnVentas.Visible = true; break;
+                case "STOCK": btnProducto.Visible = true; break;
+                case "SISTE": btnProducto.Visible = true; btnVentas.Visible = true; break;
+            }
         }
 
         private void btnProducto_Click(object sender, EventArgs e)
@@ -77,6 +90,7 @@ namespace SportMaxApp
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
+            
             Padre.Show();
         }
     }
