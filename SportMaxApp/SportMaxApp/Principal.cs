@@ -16,16 +16,18 @@ namespace SportMaxApp
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal(Form frmPadre, Usuario user)
+        public frmPrincipal(Form frmPadre, Usuario user = null, string masterPass = null)
         {
             InitializeComponent();
             Padre = frmPadre;
             Usuario = user;
+            Master = masterPass;
 
         }
 
         private Form _padre;
         private Usuario _usuario;
+        private string _masterPass;
 
         public Form Padre
         {
@@ -37,6 +39,12 @@ namespace SportMaxApp
         {
             set { _usuario = value; }
             get { return _usuario; }
+        }
+
+        private string Master
+        {
+            set { _masterPass = value; }
+            get { return _masterPass; }
         }
 
         //public frmPrincipal()
@@ -61,13 +69,20 @@ namespace SportMaxApp
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            switch (Usuario.TipoUsuario.CodUsuario)
+            if (Master.Equals(string.Empty))
             {
-                case "ADMIN": btnVentas.Visible = true; btnProducto.Visible = true; btnEmpleado.Visible = true; break;
-                case "GEREN": btnProducto.Visible = true; break;
-                case "VENDE": btnVentas.Visible = true; break;
-                case "STOCK": btnProducto.Visible = true; break;
-                case "SISTE": btnProducto.Visible = true; btnVentas.Visible = true; break;
+                switch (Usuario.TipoUsuario.CodUsuario)
+                {
+                    case "ADMIN": btnVentas.Visible = true; btnProducto.Visible = true; btnEmpleado.Visible = true; break;
+                    case "GEREN": btnProducto.Visible = true; break;
+                    case "VENDE": btnVentas.Visible = true; break;
+                    case "STOCK": btnProducto.Visible = true; break;
+                    case "SISTE": btnProducto.Visible = true; btnVentas.Visible = true; break;
+                }
+            }
+            else
+            {
+                btnVentas.Visible = true; btnProducto.Visible = true; btnEmpleado.Visible = true; 
             }
         }
 

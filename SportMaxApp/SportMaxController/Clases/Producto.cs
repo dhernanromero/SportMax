@@ -131,7 +131,7 @@ namespace SportMaxController.Clases
        public List<Producto> BuscarxCodigo(int Codigo)
        {
            DALProducto dalProducto = new DALProducto();
-           DataTable tabla = dalProducto.Listar();
+           DataTable tabla = dalProducto.BuscarxCodigo(Codigo);
            List<Producto> lista = new List<Producto>();
            Producto pProducto;
            TipoProducto pTipoProducto;
@@ -167,7 +167,7 @@ namespace SportMaxController.Clases
        public List<Producto> BuscarxDescripcion(string Descrip)
        {
            DALProducto dalProducto = new DALProducto();
-           DataTable tabla = dalProducto.Listar();
+           DataTable tabla = dalProducto.BuscarxDescripcion(Descrip);
            List<Producto> lista = new List<Producto>();
            Producto pProducto;
            TipoProducto pTipoProducto;

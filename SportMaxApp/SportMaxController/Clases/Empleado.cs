@@ -77,11 +77,13 @@ namespace SportMaxController.Clases
             List<Empleado> lista = new List<Empleado>();
             Empleado nEmpleado;
             Usuario nUsuario;
+            TipoUsuario nTipoUsuario; 
 
             foreach (DataRow fila in tabla.Rows)
             {
                 nEmpleado = new Empleado();
                 nUsuario = new Usuario();
+                nTipoUsuario = new TipoUsuario();
 
                 nEmpleado.IdEmpleado = int.Parse(fila["IdEmpleado"].ToString());
                 nUsuario.IdUsuario = int.Parse(fila["IdUsuario"].ToString());
@@ -95,8 +97,11 @@ namespace SportMaxController.Clases
                 nEmpleado.Telefono = int.Parse(fila["Telefono"].ToString());
                 nEmpleado.Estado = int.Parse(fila["Estado"].ToString());
                 nEmpleado.Sueldo = decimal.Parse(fila["Sueldo"].ToString());
+                nTipoUsuario.IdTipoUsuario = int.Parse(fila["IdTipoUsuario"].ToString());
+                nTipoUsuario.Descripcion  = fila["Descripcion"].ToString();
+                nUsuario.TipoUsuario = nTipoUsuario;
                 nEmpleado.Usuario = nUsuario;
-
+                
                 lista.Add(nEmpleado);
 
             }
@@ -118,6 +123,142 @@ namespace SportMaxController.Clases
                 throw;
             }
 
+        }
+
+        public List<Empleado> BuscarxLegajo(string pLegajo)
+        {
+            DALEmpleado dalEmpleado = new DALEmpleado();
+            DataTable tabla = dalEmpleado.BuscarxLegajo(pLegajo);
+            List<Empleado> lista = new List<Empleado>();
+            Empleado nEmpleado;
+            Usuario nUsuario;
+            TipoUsuario nTipoUsuario;
+
+            foreach (DataRow fila in tabla.Rows)
+            {
+
+                nEmpleado = new Empleado();
+                nUsuario = new Usuario();
+                nTipoUsuario = new TipoUsuario();
+
+                nEmpleado.IdEmpleado = int.Parse(fila["IdEmpleado"].ToString());
+                nUsuario.IdUsuario = int.Parse(fila["IdUsuario"].ToString());
+                nUsuario.User = fila["Usuario"].ToString();
+                nEmpleado.Legajo = fila["Legajo"].ToString();
+                nEmpleado.Nombre = fila["Nombre"].ToString();
+                nEmpleado.Apellido = fila["Apellido"].ToString();
+                nEmpleado.DNI = int.Parse(fila["DNI"].ToString());
+                nEmpleado.FechaNacimiento = DateTime.Parse(fila["FechaNacimiento"].ToString());
+                nEmpleado.Direccion = fila["Direccion"].ToString();
+                nEmpleado.Telefono = int.Parse(fila["Telefono"].ToString());
+                nEmpleado.Estado = int.Parse(fila["Estado"].ToString());
+                nEmpleado.Sueldo = decimal.Parse(fila["Sueldo"].ToString());
+                nTipoUsuario.IdTipoUsuario = int.Parse(fila["IdTipoUsuario"].ToString());
+                nTipoUsuario.Descripcion = fila["Descripcion"].ToString();
+                nUsuario.TipoUsuario = nTipoUsuario;
+                nEmpleado.Usuario = nUsuario;
+
+                lista.Add(nEmpleado);
+                
+            }
+
+            return lista;
+        }
+
+        public List<Empleado> BuscarxDNI(int pDNI)
+        {
+            DALEmpleado dalEmpleado = new DALEmpleado();
+            DataTable tabla = dalEmpleado.BuscarxDNI(pDNI);
+            List<Empleado> lista = new List<Empleado>();
+            Empleado nEmpleado;
+            Usuario nUsuario;
+            TipoUsuario nTipoUsuario;
+
+            foreach (DataRow fila in tabla.Rows)
+            {
+
+                nEmpleado = new Empleado();
+                nUsuario = new Usuario();
+                nTipoUsuario = new TipoUsuario();
+
+                nEmpleado.IdEmpleado = int.Parse(fila["IdEmpleado"].ToString());
+                nUsuario.IdUsuario = int.Parse(fila["IdUsuario"].ToString());
+                nUsuario.User = fila["Usuario"].ToString();
+                nEmpleado.Legajo = fila["Legajo"].ToString();
+                nEmpleado.Nombre = fila["Nombre"].ToString();
+                nEmpleado.Apellido = fila["Apellido"].ToString();
+                nEmpleado.DNI = int.Parse(fila["DNI"].ToString());
+                nEmpleado.FechaNacimiento = DateTime.Parse(fila["FechaNacimiento"].ToString());
+                nEmpleado.Direccion = fila["Direccion"].ToString();
+                nEmpleado.Telefono = int.Parse(fila["Telefono"].ToString());
+                nEmpleado.Estado = int.Parse(fila["Estado"].ToString());
+                nEmpleado.Sueldo = decimal.Parse(fila["Sueldo"].ToString());
+                nTipoUsuario.IdTipoUsuario = int.Parse(fila["IdTipoUsuario"].ToString());
+                nTipoUsuario.Descripcion = fila["Descripcion"].ToString();
+                nUsuario.TipoUsuario = nTipoUsuario;
+                nEmpleado.Usuario = nUsuario;
+
+                lista.Add(nEmpleado);
+
+            }
+
+            return lista;
+        }
+
+        //public int Modificar()
+        //{
+        //    DALEmpleado dalEmpl = new DALEmpleado();
+        //    try
+        //    {
+        //        return dalEmpl.ModificarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo, this.Nombre, this.Apellido, this.DNI,this.FechaNacimiento, this.Direccion, this.Telefono, this.Estado, this.Sueldo);
+        //    }
+        //    catch (Exception)
+        //    {
+                
+        //        throw;
+        //    }
+        //}
+
+        //public int Eliminar()
+        //{
+        //    DALEmpleado dalEmpl = new DALEmpleado();
+        //    try
+        //    {
+        //        return dalEmpl.EliminarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo);
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //}
+
+        public int Modificar()
+        {
+            DALEmpleado dalEmpl = new DALEmpleado();
+            try
+            {
+                return dalEmpl.ModificarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo, this.Nombre, this.Apellido, this.DNI, this.FechaNacimiento, this.Direccion, this.Telefono, this.Estado, this.Sueldo);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public int Eliminar()
+        {
+            DALEmpleado dalEmpl = new DALEmpleado();
+            try
+            {
+                return dalEmpl.EliminarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         #endregion

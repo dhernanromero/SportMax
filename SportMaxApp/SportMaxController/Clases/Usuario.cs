@@ -47,30 +47,45 @@ namespace SportMaxController.Clases
 
         #endregion
 
+        public override string ToString()
+        {
+            return this.User;
+
+        }
+
         #region Metodos
-        public Usuario IniciarSesion(string sUser, string sPass)
+        public Usuario IniciarSesion()
         {
             DALUsuario dalUser = new DALUsuario();
-            DataTable tabal = dalUser.Autenticar(sUser, sPass);
+            DataTable tabal = dalUser.Autenticar(this.User, this.Password);
             List<Usuario> lista = new List<Usuario>();
-            Usuario pUser = new Usuario();
-            TipoUsuario pTipoUsuario;
+            //Usuario pUser = new Usuario();
+            //TipoUsuario pTipoUsuario;
 
             foreach (DataRow fila in tabal.Rows)
             {
-                pUser = new Usuario();
-                pTipoUsuario = new TipoUsuario();
+                //pUser = new Usuario();
+                //pTipoUsuario = new TipoUsuario();
 
-                pUser.IdUsuario = int.Parse(fila["idUsuario"].ToString());
-                pUser.User = fila["Usuario"].ToString();
-                pTipoUsuario.IdTipoUsuario = int.Parse(fila["idTipoUsuario"].ToString());
-                pTipoUsuario.Descripcion = fila["Descripcion"].ToString();
-                pTipoUsuario.CodUsuario = fila["CodUsuario"].ToString();
-                pUser.TipoUsuario = pTipoUsuario;
+                //pUser.IdUsuario = int.Parse(fila["idUsuario"].ToString());
+                //pUser.User = fila["Usuario"].ToString();
+                //pTipoUsuario.IdTipoUsuario = int.Parse(fila["idTipoUsuario"].ToString());
+                //pTipoUsuario.Descripcion = fila["Descripcion"].ToString();
+                //pTipoUsuario.CodUsuario = fila["CodUsuario"].ToString();
+                //pUser.TipoUsuario = pTipoUsuario;
+                //pUser = new Usuario();
+                //pTipoUsuario = new TipoUsuario();
+
+                this.IdUsuario = int.Parse(fila["idUsuario"].ToString());
+                this.User = fila["Usuario"].ToString();
+                this.TipoUsuario.IdTipoUsuario = int.Parse(fila["idTipoUsuario"].ToString());
+                this.TipoUsuario.Descripcion = fila["Descripcion"].ToString();
+                this.TipoUsuario.CodUsuario = fila["CodUsuario"].ToString();
+                //pUser.TipoUsuario = pTipoUsuario;
                 
             }
 
-            return pUser;
+            return this;
 
          }
   
@@ -103,6 +118,20 @@ namespace SportMaxController.Clases
                 throw;
             }
 
+        }
+
+        public int Modificar()
+        {
+            DALUsuario user = new DALUsuario();
+            try
+            {
+                return user.ModificarUsuario(this.IdUsuario, this.User, this.Password, this.TipoUsuario.IdTipoUsuario);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
         }
         #endregion
     }

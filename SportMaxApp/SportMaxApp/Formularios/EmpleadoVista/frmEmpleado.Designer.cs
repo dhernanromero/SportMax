@@ -185,14 +185,14 @@
             this.cboEstado.Location = new System.Drawing.Point(438, 148);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(100, 21);
-            this.cboEstado.TabIndex = 14;
+            this.cboEstado.TabIndex = 12;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(197, 208);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(77, 29);
-            this.btnAceptar.TabIndex = 14;
+            this.btnAceptar.TabIndex = 13;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -202,7 +202,7 @@
             this.btCancelar.Location = new System.Drawing.Point(396, 208);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(80, 29);
-            this.btCancelar.TabIndex = 15;
+            this.btCancelar.TabIndex = 14;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);

@@ -21,12 +21,13 @@ namespace SportMaxApp
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            string user = txtUsuario.Text;
-            string pass = txtContraseña.Text;
-
             Usuario Usuario = new Usuario();
             Usuario nUsuario = new Usuario();
-            nUsuario = Usuario.IniciarSesion(user, pass);
+            nUsuario.User = txtUsuario.Text;
+            nUsuario.Password  = txtContraseña.Text;
+
+          
+           nUsuario.IniciarSesion();
             
             //switch (pass)
             //{
@@ -35,24 +36,39 @@ namespace SportMaxApp
             //    case "admin": tipoUsuario = "Administrador"; break;
             //    default: tipoUsuario = "Usuario Inexistente"; break;
             //}
+           try
+           {
+               if (nUsuario.User.Equals("Admin") || nUsuario.User.Equals("admin") && nUsuario.Password.Equals("Admin") || nUsuario.Password.Equals("admin"))
+               {
+                   frmPrincipal Principal = new frmPrincipal(this, null,"ADMIN");
 
-            if (nUsuario.TipoUsuario.IdTipoUsuario > 0)
-            {
-                frmPrincipal Principal = new frmPrincipal(this,nUsuario);
+                   this.Hide();
+                   this.Limpiar();
+                   Principal.Show();
 
-                this.Hide();
-                this.Limpiar();
-                Principal.Show();
+                   //this.Show(); 
 
-                //this.Show(); 
+               }
+               else if(nUsuario.TipoUsuario.IdTipoUsuario > 0)
+               {
+                    frmPrincipal Principal = new frmPrincipal(this, nUsuario,null);
 
-            }
-            else
-            {
-                MessageBox.Show("Usuario inexistente");
-            
-            }
-            
+                   this.Hide();
+                   this.Limpiar();
+                   Principal.Show();
+
+                   //this.Show(); 
+               }
+               else
+               {
+                   MessageBox.Show("Usuario inexistente");
+
+               }
+           }
+           catch(NullReferenceException )
+           {
+               MessageBox.Show("Usuario inexistente");
+           }
         }
 
         private void Login_Load(object sender, EventArgs e)

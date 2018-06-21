@@ -46,16 +46,17 @@ namespace SportMaxModel
 
         public int AgregarUsuario(int iIdUsuario, string sUsuario, string sPass, int iTipoUsuario)
         {
-            SqlParameter[] param = new SqlParameter[3];
-            string hash = EncodePassword(string.Concat(sUsuario, sPass)); 
-            //param[0] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
-            //param[1] = objConexion.crearParametro("@Usuario", sUsuario);
-            //param[2] = objConexion.crearParametro("@Pass", hash);
-            //param[3] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
+            SqlParameter[] param = new SqlParameter[4];
+            string hash = EncodePassword(string.Concat(sUsuario, sPass));
 
-            param[0] = objConexion.crearParametro("@Usuario", sUsuario);
-            param[1] = objConexion.crearParametro("@Pass", hash);
-            param[2] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
+            param[0] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
+            param[1] = objConexion.crearParametro("@Usuario", sUsuario);
+            param[2] = objConexion.crearParametro("@Pass", hash);
+            param[3] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
+
+            //param[0] = objConexion.crearParametro("@Usuario", sUsuario);
+            //param[1] = objConexion.crearParametro("@Pass", hash);
+            //param[2] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
 
             try
             {
@@ -90,6 +91,25 @@ namespace SportMaxModel
             return -1; 
 
         }
-                
+
+        public int ModificarUsuario(int iIdUsuario, string sUsuario, string sPass, int iTipoUsuario)
+        {
+            SqlParameter[] param = new SqlParameter[3];
+            string hash = EncodePassword(string.Concat(sUsuario, sPass));
+            param[0] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
+            param[1] = objConexion.crearParametro("@Usuario", sUsuario);
+            param[2] = objConexion.crearParametro("@Pass", hash);
+            param[3] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
+
+            try
+            {
+                return objConexion.EscribirPorStoreProcedure("Usuario_Modificar", param);
+            }
+            catch (Exception ex)
+            {
+                return ex.HResult;
+                throw;
+            }
+        }                
     }
 }

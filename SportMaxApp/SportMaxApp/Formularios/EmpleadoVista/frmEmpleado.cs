@@ -96,8 +96,8 @@ namespace SportMaxApp.Formularios.EmpleadoVista
                 }
                 else if (Accion.Equals("M"))
                 {
-                    //resUsuario = nEmpleado.Usuario.Modificar();
-                    //resEmpleado = nEmpleado.Modificar();
+                    resUsuario = nEmpleado.Usuario.Modificar();
+                    resEmpleado = nEmpleado.Modificar();
                 }
 
 
@@ -116,7 +116,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                //throw;
+                throw;
             }
 
  
@@ -129,6 +129,11 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             cboTipoUsuario.DisplayMember = "Descripcion";
 
             cboEstado.DataSource = Enum.GetValues(typeof(EstadoUsuario));
+            if (Accion.Equals("M"))
+            {
+                ModEmpleado();
+
+            }
         }
 
         private void Limpiar()
@@ -149,5 +154,23 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             txtLegajo.Focus();
         }
 
+        private void ModEmpleado()
+        {
+            txtLegajo.Text = Empl.Legajo;
+            txtDNI.Text = Empl.DNI.ToString();
+            cboTipoUsuario.SelectedValue = Empl.Usuario.TipoUsuario.IdTipoUsuario;
+            txtNombre.Text = Empl.Nombre;
+            txtApellido.Text = Empl.Apellido;
+            dtpFechaNac.Text = Empl.FechaNacimiento.ToString();
+            txtUsuario.Text = Empl.Usuario.User;
+            txtPass.Text = Empl.Usuario.Password;
+            txtSueldo.Text = Empl.Sueldo.ToString();
+            txtDireccion.Text  = Empl.Direccion;
+            txtTelefono.Text = Empl.Telefono.ToString();
+            cboEstado.SelectedValue = Empl.Estado;
+
+            txtLegajo.Enabled = false;
+            txtUsuario.Enabled = false;
+        }
     }
 }

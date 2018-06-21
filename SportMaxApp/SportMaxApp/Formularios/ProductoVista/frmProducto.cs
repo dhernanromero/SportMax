@@ -143,7 +143,7 @@ namespace SportMaxApp.Formularios.ProductoVista
  
         }
 
-        public void ModProducto()
+        private void ModProducto()
         {
             //Producto nProd = new Producto();
             //List<Producto> lProducto = new List<Producto>();
