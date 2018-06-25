@@ -26,9 +26,9 @@ namespace SportMaxModel
             {
                 return objConexion.LeerPorStoreProcedure("Usuario_Autenticar",param);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-           
+                
                 throw;
             }
 

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Net.NetworkInformation;
+using System.IO;
+using SportMaxModel;
 
 //Incorporo el espacio de nombre System.Data.SqlClient
 using System.Data.SqlClient;
@@ -24,7 +28,8 @@ namespace SportMaxModel
         private void Conectar()
         {
             //strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=bd_productos;Data Source=AR02TLT000370\\SQLEXPRESS";
-            strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=SportMaxDB;Data Source=.\\MSSQLSERVER2012";
+            //strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=SportMaxDB;Data Source=.\\MSSQLSERVER2012";
+            strCadenaDeConexion = ConfigurationManager.ConnectionStrings["SportMaxConnection"].ConnectionString; 
             
             //Instanció un objeto del tipo SqlConnection
             objConexion = new SqlConnection();

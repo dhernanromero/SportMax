@@ -14,7 +14,6 @@ D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMa
 D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxModel.dll
 D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\bin\Debug\SportMaxModel.pdb
 D:\UPE\Tecnicas de Programacion\Trabajo Practico - Sport Max\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.abmProducto.resources
-C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe.config
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.exe
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.pdb
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe

@@ -129,9 +129,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SportMaxController\SportMaxController.csproj">
       <Project>{136b85b7-0077-4ade-8139-c7c4b16226d9}</Project>
       <Name>SportMaxController</Name>
