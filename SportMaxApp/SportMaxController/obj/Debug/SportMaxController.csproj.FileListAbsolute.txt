@@ -12,3 +12,4 @@ C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\bin\Debu
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.csprojResolveAssemblyReference.cache
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.dll
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\obj\Debug\SportMaxController.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxController\bin\Debug\App.config

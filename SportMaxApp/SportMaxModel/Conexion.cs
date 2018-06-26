@@ -28,9 +28,9 @@ namespace SportMaxModel
         private void Conectar()
         {
             //strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=bd_productos;Data Source=AR02TLT000370\\SQLEXPRESS";
-            //strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=SportMaxDB;Data Source=.\\MSSQLSERVER2012";
-            strCadenaDeConexion = ConfigurationManager.ConnectionStrings["SportMaxConnection"].ConnectionString; 
-            
+            strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=SportMaxDB;Data Source=.\\MSSQLSERVER2012";
+           //strCadenaDeConexion = ConfigurationManager.ConnectionStrings[0].ConnectionString;
+
             //Instanció un objeto del tipo SqlConnection
             objConexion = new SqlConnection();
             objConexion.ConnectionString = strCadenaDeConexion;

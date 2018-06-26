@@ -35,3 +35,4 @@ C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\Sport
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe.config
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.exe
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Debug\App.config

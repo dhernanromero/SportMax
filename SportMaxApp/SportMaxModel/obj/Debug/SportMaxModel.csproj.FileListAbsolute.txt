@@ -9,3 +9,4 @@ C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\obj\Debug\Spo
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\obj\Debug\SportMaxModel.pdb
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\obj\Debug\SportMaxModel.csprojResolveAssemblyReference.cache
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\bin\Debug\SportMaxModel.dll.config
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\bin\Debug\App.config
