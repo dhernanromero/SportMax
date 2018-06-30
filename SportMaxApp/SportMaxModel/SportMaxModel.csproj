@@ -41,17 +41,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DALDetallVenta.cs" />
     <Compile Include="DALEmpleado.cs" />
     <Compile Include="DALMarca.cs" />
     <Compile Include="DALProducto.cs" />
     <Compile Include="DALTipoProducto.cs" />
     <Compile Include="DALTipoUsuario.cs" />
     <Compile Include="DALUsuario.cs" />
+    <Compile Include="DALVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

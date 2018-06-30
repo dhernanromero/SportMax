@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using SportMaxModel;
 
 namespace SportMaxController.Clases
 {
@@ -15,6 +17,7 @@ namespace SportMaxController.Clases
         private int _idFormaPago;
         private DateTime _fecha;
         private decimal _montoTotal;
+        private DetalleVenta _detalleVenta;
         #endregion
 
         #region Propiedades Publicas
@@ -56,6 +59,39 @@ namespace SportMaxController.Clases
         #endregion
 
         #region Metodos
+
+        public int Agregar()
+        {
+            DALVenta dalVenta = new DALVenta();
+            DALDetallVenta dalDetalle = new DALDetallVenta();
+
+            try
+            {
+                return dalVenta.RegistraVenta(this.IdVenta, this.Empleado.IdEmpleado, this.Cliente.IdCliente, this.IdFormaPago, this.Fecha, this.MontoTotal);
+               
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+                
+
+        }
+
+        public int ObtenerId()
+        {
+            DALVenta vent = new DALVenta();
+            try
+            {
+                return vent.ObtenerId();
+            }
+            catch (Exception )
+            {
+                throw; 
+            }
+        }
+
         #endregion
+
     }
 }

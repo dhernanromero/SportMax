@@ -26,8 +26,8 @@ namespace SportMaxApp
             nUsuario.User = txtUsuario.Text;
             nUsuario.Password  = txtContraseña.Text;
 
-          
-           
+
+            nUsuario.IniciarSesion();
             
             //switch (pass)
             //{

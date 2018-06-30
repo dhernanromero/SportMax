@@ -26,11 +26,11 @@ namespace SportMaxModel.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DIEGO-PC\\MSSQLSERVER2012;Initial Catalog=SportMaxDB;Integrated Securi" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=G100603NT1165\\SQLEXPRESS;Initial Catalog=SportMaxDB;Integrated Securi" +
             "ty=True")]
-        public string SportMaxDBConnection {
+        public string SportMaxDBConnectionString {
             get {
-                return ((string)(this["SportMaxDBConnection"]));
+                return ((string)(this["SportMaxDBConnectionString"]));
             }
         }
     }
