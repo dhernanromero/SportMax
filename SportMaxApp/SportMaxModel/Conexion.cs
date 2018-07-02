@@ -78,7 +78,7 @@ namespace SportMaxModel
                 //Lleno la tabla, el objeto unaTabla con el adaptador
                 objAdaptador.Fill(unaTabla);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 //Como hay error... por el motivo que sea asigno el resultado a null
                 unaTabla = null;
@@ -286,6 +286,18 @@ namespace SportMaxModel
             objParametro.ParameterName = pNombre;
             objParametro.Value = pValor;
             objParametro.DbType = DbType.Boolean;
+
+            return objParametro;
+        }
+
+        public SqlParameter crearParametro(string pNombre, decimal pValor)
+        {
+
+            SqlParameter objParametro = new SqlParameter();
+
+            objParametro.ParameterName = pNombre;
+            objParametro.Value = pValor;
+            objParametro.DbType = DbType.Decimal;
 
             return objParametro;
         }

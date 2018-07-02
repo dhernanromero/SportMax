@@ -67,7 +67,7 @@ namespace SportMaxController.Clases
 
             try
             {
-                return dalVenta.RegistraVenta(this.IdVenta, this.Empleado.IdEmpleado, this.Cliente.IdCliente, this.IdFormaPago, this.Fecha, this.MontoTotal);
+                return dalVenta.RegistrarVenta(this.IdVenta, this.Empleado.IdEmpleado, this.Cliente.IdCliente, this.IdFormaPago, this.Fecha, this.MontoTotal);
                
             }
             catch (Exception)

@@ -13,7 +13,7 @@ namespace SportMaxModel
         Conexion objConexion = new Conexion();
 
         //metodo test 
-        public int AgregarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, float mPrecio, int iCantidad, int bEstado)
+        public int AgregarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, decimal mPrecio, int iCantidad, int bEstado)
         {
 
 
@@ -102,7 +102,7 @@ namespace SportMaxModel
             return tabla;
         }
 
-        public int ModificarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, float mPrecio, int iCantidad, int bEstado)
+        public int ModificarProducto(int iIdProducto, int iIdTipoProducto, int iIdMarca, string sDescripcion, string sTalla, decimal mPrecio, int iCantidad, int bEstado)
         {
 
             SqlParameter[] param = new SqlParameter[8];
@@ -142,6 +142,43 @@ namespace SportMaxModel
                 throw;
             }
         }
-        
+
+        public int ActualizarCantidad(int iIdProducto,int iCantidad)
+        {
+            SqlParameter[] param = new SqlParameter[2];
+
+            param[0] = objConexion.crearParametro("@iIdProducto", iIdProducto);
+            param[1] = objConexion.crearParametro("@iContador", iCantidad);
+
+            try
+            {
+                return objConexion.EscribirPorStoreProcedure("Producto_ActualizarCantidad", param); 
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
+        public DataTable BuscarxCod(int Codigo)
+        {
+            DataTable tabla = new DataTable();
+            SqlParameter[] param = new SqlParameter[1];
+
+            param[0] = objConexion.crearParametro("@IdProducto", Codigo);
+            try
+            {
+                tabla = objConexion.LeerPorStoreProcedure("Producto_BuscarxCodigo", param);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+            return tabla;
+        }
     }
 }

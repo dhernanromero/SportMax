@@ -88,6 +88,7 @@ namespace SportMaxController.Clases
                 nEmpleado.IdEmpleado = int.Parse(fila["IdEmpleado"].ToString());
                 nUsuario.IdUsuario = int.Parse(fila["IdUsuario"].ToString());
                 nUsuario.User = fila["Usuario"].ToString();
+                nUsuario.Password = fila["Password"].ToString();
                 nEmpleado.Legajo = fila["Legajo"].ToString();
                 nEmpleado.Nombre = fila["Nombre"].ToString();
                 nEmpleado.Apellido = fila["Apellido"].ToString();
@@ -144,6 +145,7 @@ namespace SportMaxController.Clases
                 nEmpleado.IdEmpleado = int.Parse(fila["IdEmpleado"].ToString());
                 nUsuario.IdUsuario = int.Parse(fila["IdUsuario"].ToString());
                 nUsuario.User = fila["Usuario"].ToString();
+                nUsuario.Password = fila["Password"].ToString();
                 nEmpleado.Legajo = fila["Legajo"].ToString();
                 nEmpleado.Nombre = fila["Nombre"].ToString();
                 nEmpleado.Apellido = fila["Apellido"].ToString();
@@ -184,6 +186,7 @@ namespace SportMaxController.Clases
                 nEmpleado.IdEmpleado = int.Parse(fila["IdEmpleado"].ToString());
                 nUsuario.IdUsuario = int.Parse(fila["IdUsuario"].ToString());
                 nUsuario.User = fila["Usuario"].ToString();
+                nUsuario.Password = fila["Password"].ToString();
                 nEmpleado.Legajo = fila["Legajo"].ToString();
                 nEmpleado.Nombre = fila["Nombre"].ToString();
                 nEmpleado.Apellido = fila["Apellido"].ToString();
@@ -205,33 +208,45 @@ namespace SportMaxController.Clases
             return lista;
         }
 
-        //public int Modificar()
-        //{
-        //    DALEmpleado dalEmpl = new DALEmpleado();
-        //    try
-        //    {
-        //        return dalEmpl.ModificarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo, this.Nombre, this.Apellido, this.DNI,this.FechaNacimiento, this.Direccion, this.Telefono, this.Estado, this.Sueldo);
-        //    }
-        //    catch (Exception)
-        //    {
-                
-        //        throw;
-        //    }
-        //}
+        public Empleado BuscarxIdUsuario(int pIdUsuario)
+        {
+            DALEmpleado dalEmpleado = new DALEmpleado();
+            DataTable tabla = dalEmpleado.BuscarxIdUsuario(pIdUsuario);
+            List<Empleado> lista = new List<Empleado>();
+            Empleado nEmpleado = new Empleado();
+            Usuario nUsuario;
+            TipoUsuario nTipoUsuario;
 
-        //public int Eliminar()
-        //{
-        //    DALEmpleado dalEmpl = new DALEmpleado();
-        //    try
-        //    {
-        //        return dalEmpl.EliminarEmpleado(this.IdEmpleado, this.Usuario.IdUsuario, this.Legajo);
-        //    }
-        //    catch (Exception)
-        //    {
+            foreach (DataRow fila in tabla.Rows)
+            {
 
-        //        throw;
-        //    }
-        //}
+                nUsuario = new Usuario();
+                nTipoUsuario = new TipoUsuario();
+
+                nEmpleado.IdEmpleado = int.Parse(fila["IdEmpleado"].ToString());
+                nUsuario.IdUsuario = int.Parse(fila["IdUsuario"].ToString());
+                nUsuario.User = fila["Usuario"].ToString();
+                nUsuario.Password = fila["Password"].ToString();
+                nEmpleado.Legajo = fila["Legajo"].ToString();
+                nEmpleado.Nombre = fila["Nombre"].ToString();
+                nEmpleado.Apellido = fila["Apellido"].ToString();
+                nEmpleado.DNI = int.Parse(fila["DNI"].ToString());
+                nEmpleado.FechaNacimiento = DateTime.Parse(fila["FechaNacimiento"].ToString());
+                nEmpleado.Direccion = fila["Direccion"].ToString();
+                nEmpleado.Telefono = int.Parse(fila["Telefono"].ToString());
+                nEmpleado.Estado = int.Parse(fila["Estado"].ToString());
+                nEmpleado.Sueldo = decimal.Parse(fila["Sueldo"].ToString());
+                nTipoUsuario.IdTipoUsuario = int.Parse(fila["IdTipoUsuario"].ToString());
+                nTipoUsuario.Descripcion = fila["Descripcion"].ToString();
+                nUsuario.TipoUsuario = nTipoUsuario;
+                nEmpleado.Usuario = nUsuario;
+
+            }
+
+            return nEmpleado;
+        }
+
+ 
 
         public int Modificar()
         {

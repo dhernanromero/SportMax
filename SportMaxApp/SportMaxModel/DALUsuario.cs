@@ -26,7 +26,7 @@ namespace SportMaxModel
             {
                 return objConexion.LeerPorStoreProcedure("Usuario_Autenticar",param);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
                 throw;
@@ -92,14 +92,14 @@ namespace SportMaxModel
 
         }
 
-        public int ModificarUsuario(int iIdUsuario, string sUsuario, string sPass, int iTipoUsuario)
+        public int ModificarUsuario(int iIdUsuario, string sUsuario, int iTipoUsuario)
         {
             SqlParameter[] param = new SqlParameter[3];
-            string hash = EncodePassword(string.Concat(sUsuario, sPass));
+            //string hash = EncodePassword(string.Concat(sUsuario, sPass));
             param[0] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
             param[1] = objConexion.crearParametro("@Usuario", sUsuario);
-            param[2] = objConexion.crearParametro("@Pass", hash);
-            param[3] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
+            //param[2] = objConexion.crearParametro("@Pass", hash);
+            param[2] = objConexion.crearParametro("@IdTipoUsuario", iTipoUsuario);
 
             try
             {
@@ -111,5 +111,23 @@ namespace SportMaxModel
                 throw;
             }
         }                
+
+        public int ModificarContraseña(int iIdUsuario, string sUsuario, string sPass)
+        {
+            SqlParameter[] param = new SqlParameter[3];
+            string hash = EncodePassword(string.Concat(sUsuario, sPass));
+            param[0] = objConexion.crearParametro("@IdUsuario", iIdUsuario);
+            param[1] = objConexion.crearParametro("@Pass", hash);
+
+            try
+            {
+                return objConexion.EscribirPorStoreProcedure("Usuario_ActualizarContrasela", param);
+            }
+            catch (Exception ex)
+            {
+                return ex.HResult;
+                throw;
+            }
+        }
     }
 }

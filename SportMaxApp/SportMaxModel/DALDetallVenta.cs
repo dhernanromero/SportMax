@@ -18,10 +18,10 @@ namespace SportMaxModel
             int id;
             try
             {
-                tabla = objConexion.LeerPorStoreProcedure("Venta_ObtenerId");
+                tabla = objConexion.LeerPorStoreProcedure("DetalleVenta_ObtenerId");
                 foreach (DataRow fila in tabla.Rows)
                 {
-                    return id = int.Parse(fila["idVenta"].ToString());
+                    return id = int.Parse(fila["idDetalle"].ToString());
                 }
             }
             catch (Exception)
@@ -30,6 +30,27 @@ namespace SportMaxModel
             }
 
             return -1;
+        }
+
+        public int RegistrarDetalleVenta(int iIdDetalleVenta, int iIdVenta, int iIdProducto, int iCantidad)
+        {
+            SqlParameter[] param = new SqlParameter[4];
+
+            param[0] = objConexion.crearParametro("@iIdDetalle", iIdDetalleVenta);
+            param[1] = objConexion.crearParametro("@iIdVenta", iIdVenta);
+            param[2] = objConexion.crearParametro("@iIdProducto", iIdProducto);
+            param[3] = objConexion.crearParametro("@iCantidad", iCantidad);
+
+            try
+            {
+                return objConexion.EscribirPorStoreProcedure("DetalleVenta_Insertar", param); 
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
         }
     }
 }

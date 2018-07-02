@@ -27,12 +27,10 @@ C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\Sport
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Properties.Resources.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.frmPrincipal.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.csproj.GenerateResource.Cache
-C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.Venta.frmVenta.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ProductoVista.abmProducto.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ProductoVista.frmProducto.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.EmpleadoVista.frmEmpleado.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.EmpleadoVista.abmEmpleado.resources
-C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Debug\App.config
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.pdb
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxController.dll
@@ -52,3 +50,6 @@ C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Deb
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.exe
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.pdb
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe.config
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe.config
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.VentaVista.frmVenta.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ClienteVista.frmCliente.resources

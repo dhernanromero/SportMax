@@ -26,7 +26,7 @@ namespace SportMaxModel
             param[7] = objConexion.crearParametro("@Direccion", sDireccion);
             param[8] = objConexion.crearParametro("@Telefono", iTelefono);
             param[9] = objConexion.crearParametro("@Estado", bEstado);
-            param[10] = objConexion.crearParametro("@Sueldo", dSueldo.ToString());
+            param[10] = objConexion.crearParametro("@Sueldo", dSueldo);
             //param[11] = objConexion.crearParametro("@Usuario", sUsuario);
 
             try
@@ -118,6 +118,25 @@ namespace SportMaxModel
             return tabla;
         }
 
+        public DataTable BuscarxIdUsuario(int pIdUsuario)
+        {
+            DataTable tabla = new DataTable();
+            SqlParameter[] param = new SqlParameter[1];
+
+            param[0] = objConexion.crearParametro("@iIdUsuario", pIdUsuario);
+            try
+            {
+                tabla = objConexion.LeerPorStoreProcedure("Empleado_BuscarxIdUsuario", param);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return tabla;
+        }
+
         public int ModificarEmpleado(int iIdEmpleado, int iIdUsuario, string sLegajo, string sNombre, string sApellido, int iDni, DateTime dFechaNacimiento, string sDireccion, int iTelefono, int bEstado, decimal dSueldo)
         {
             SqlParameter[] param = new SqlParameter[11];
@@ -132,7 +151,7 @@ namespace SportMaxModel
             param[7] = objConexion.crearParametro("@Direccion", sDireccion);
             param[8] = objConexion.crearParametro("@Telefono", iTelefono);
             param[9] = objConexion.crearParametro("@Estado", bEstado);
-            param[10] = objConexion.crearParametro("@Sueldo", dSueldo.ToString());
+            param[10] = objConexion.crearParametro("@Sueldo", dSueldo);
             //param[11] = objConexion.crearParametro("@Usuario", sUsuario);
 
             try

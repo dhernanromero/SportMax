@@ -25,6 +25,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
         private Form _padre;
         private string _accion;
         private Empleado _Empl;
+        private bool _modPass;
 
         public enum EstadoUsuario
         {
@@ -51,12 +52,15 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             get { return _Empl; }
         }
 
-
+        public bool ModPass
+        {
+            set { _modPass = value; }
+            get { return _modPass; }
+        }
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Padre.Show();
+            Salir();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -67,7 +71,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             Usuario nUsers = new Usuario();
             TipoUsuario nTipoUser = new TipoUsuario();
 
-            nEmpleado.IdEmpleado = nEmpleado.ObtenerId();
+            nEmpleado.IdEmpleado = (Accion.Equals("A") ? nEmpleado.ObtenerId() : Empl.IdEmpleado); 
             nEmpleado.Legajo = txtLegajo.Text;
             nEmpleado.Nombre = txtNombre.Text;
             nEmpleado.Apellido = txtApellido.Text;
@@ -78,9 +82,9 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             nEmpleado.Estado = cboEstado.SelectedIndex;
             nEmpleado.Sueldo = decimal.Parse(txtSueldo.Text);
 
-            nUsers.IdUsuario = nUsers.ObtenerId();
+            nUsers.IdUsuario = (Accion.Equals("A") ? nUsers.ObtenerId() : Empl.Usuario.IdUsuario); 
             nUsers.User = txtUsuario.Text;
-            nUsers.Password = txtPass.Text;
+            nUsers.Password = (Accion.Equals("A") ? txtPass.Text: Empl.Usuario.Password);
             nTipoUser.IdTipoUsuario = cboTipoUsuario.SelectedIndex;
             nUsers.TipoUsuario = nTipoUser; 
             nEmpleado.Usuario = nUsers;
@@ -90,8 +94,8 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             {
                 if (Accion.Equals("A"))
                 {
-                     resUsuario = nEmpleado.Usuario.Agregar();
-                     resEmpleado = nEmpleado.Agregar();
+                    resUsuario = nEmpleado.Usuario.Agregar();
+                    resEmpleado = nEmpleado.Agregar();
                      
                 }
                 else if (Accion.Equals("M"))
@@ -99,17 +103,20 @@ namespace SportMaxApp.Formularios.EmpleadoVista
                     resUsuario = nEmpleado.Usuario.Modificar();
                     resEmpleado = nEmpleado.Modificar();
                 }
-
+                else if(Accion.Equals("P"))
+                {
+                    Salir();
+                }
 
                 if (resEmpleado.Equals(1) && resUsuario.Equals(1))
                 {
-                    MessageBox.Show("Empleado agregado correctamente");
+                    MessageBox.Show("Accion finalizado correctamente");
                     Limpiar();
                
                 }
                 else
                 {
-                    MessageBox.Show("Error al agregar Empleado");
+                    MessageBox.Show("Error al realizar la accion");
                 }
               
             }
@@ -128,10 +135,15 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             cboTipoUsuario.DataSource = objTipoUsuario.ListarTipoUsuario();
             cboTipoUsuario.DisplayMember = "Descripcion";
 
+            btnModContraseña.Visible = false;
+            
+
             cboEstado.DataSource = Enum.GetValues(typeof(EstadoUsuario));
-            if (Accion.Equals("M"))
+            switch (Accion)
             {
-                ModEmpleado();
+                case "A": btnAceptar.Location = new Point(185, 200); break;
+                case "M": ModEmpleado(); btnModContraseña.Visible = true; break;
+                case "P": CargarPerfil();  btnModContraseña.Visible = true; break;
 
             }
         }
@@ -158,7 +170,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
         {
             txtLegajo.Text = Empl.Legajo;
             txtDNI.Text = Empl.DNI.ToString();
-            cboTipoUsuario.SelectedValue = Empl.Usuario.TipoUsuario.IdTipoUsuario;
+            cboTipoUsuario.SelectedIndex = Empl.Usuario.TipoUsuario.IdTipoUsuario;
             txtNombre.Text = Empl.Nombre;
             txtApellido.Text = Empl.Apellido;
             dtpFechaNac.Text = Empl.FechaNacimiento.ToString();
@@ -167,10 +179,61 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             txtSueldo.Text = Empl.Sueldo.ToString();
             txtDireccion.Text  = Empl.Direccion;
             txtTelefono.Text = Empl.Telefono.ToString();
-            cboEstado.SelectedValue = Empl.Estado;
+            cboEstado.SelectedIndex = Empl.Estado;
 
             txtLegajo.Enabled = false;
             txtUsuario.Enabled = false;
+            txtPass.Enabled = false;
+            ModPass = false; 
+        }
+
+        private void CargarPerfil()
+        {
+            txtLegajo.Text = Empl.Legajo;
+            txtDNI.Text = Empl.DNI.ToString();
+            cboTipoUsuario.SelectedIndex = Empl.Usuario.TipoUsuario.IdTipoUsuario;
+            txtNombre.Text = Empl.Nombre;
+            txtApellido.Text = Empl.Apellido;
+            dtpFechaNac.Text = Empl.FechaNacimiento.ToString();
+            txtUsuario.Text = Empl.Usuario.User;
+            txtPass.Text = Empl.Usuario.Password;
+            txtSueldo.Text = Empl.Sueldo.ToString();
+            txtDireccion.Text = Empl.Direccion;
+            txtTelefono.Text = Empl.Telefono.ToString();
+            cboEstado.SelectedIndex = Empl.Estado;
+
+            txtLegajo.Enabled = false;
+            txtUsuario.Enabled = false;
+            txtDNI.Enabled = false;
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtSueldo.Enabled = false;
+            txtSueldo.Visible = false;
+            cboTipoUsuario.Enabled = false;
+            cboEstado.Enabled = false;
+            cboEstado.Visible = false;
+            lblSueldo.Visible = false;
+            txtPass.Enabled = false;
+            dtpFechaNac.Enabled = false;
+            txtDireccion.Enabled = false;
+            txtTelefono.Enabled = false;
+
+            ModPass = false;
+            btnModContraseña.Visible = false;
+            this.Text = "Mi Perfil";
+        }
+
+        private void Salir()
+        {
+            this.Close();
+            Padre.Show();
+        }
+
+        private void btnModContraseña_Click(object sender, EventArgs e)
+        {
+            ModPass = true;
+            btnModContraseña.Enabled = false;
+            txtPass.Enabled = true;
         }
     }
 }

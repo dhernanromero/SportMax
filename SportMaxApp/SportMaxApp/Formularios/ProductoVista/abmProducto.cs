@@ -75,7 +75,7 @@ namespace SportMaxApp.Formularios.ProductoVista
             Prod.Codigo = int.Parse(row.Cells["idProducto"].Value.ToString());
             Prod.Descripcion = row.Cells["Descripcion"].Value.ToString();
             Prod.TipoProducto = (TipoProducto)row.Cells[2].Value;
-            Prod.Precio = float.Parse(row.Cells["Precio"].Value.ToString());
+            Prod.Precio = decimal.Parse(row.Cells["Precio"].Value.ToString());
             Prod.Cantidad = int.Parse(row.Cells["Cantidad"].Value.ToString());
             Prod.Marca = (Marca)row.Cells[5].Value;
             Prod.Estado = int.Parse(row.Cells["Estado"].Value.ToString());
@@ -118,7 +118,7 @@ namespace SportMaxApp.Formularios.ProductoVista
             int resultado = 0;
             Prod.Codigo = int.Parse(gridProductos.CurrentRow.Cells["IdProducto"].Value.ToString());
 
-            resultado = Prod.Eliminar(Prod.Codigo);
+            resultado = Prod.Eliminar();
             if(resultado.Equals(1))
             {
    

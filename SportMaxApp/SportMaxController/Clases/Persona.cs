@@ -30,6 +30,11 @@ namespace SportMaxController.Clases
             set { _apellido = value; }
         }
 
+        public string NombreCompleto
+        {
+            get { return _nombre + " " + _apellido; }
+        }
+
         public int DNI
         {
             get { return _dni; }

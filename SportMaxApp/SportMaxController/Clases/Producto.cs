@@ -14,7 +14,7 @@ namespace SportMaxController.Clases
        private int _codigo;
        private string _descripcion;
        private TipoProducto _tipo;
-       private float _precio;
+       private decimal _precio;
        private int _cantidad;
        private Marca _marca;
        private int _estado;
@@ -41,7 +41,7 @@ namespace SportMaxController.Clases
            set { _tipo = value; }
        }
 
-       public float Precio
+       public decimal Precio
        {
            get { return _precio; }
            set { _precio = value; }
@@ -108,7 +108,7 @@ namespace SportMaxController.Clases
                
                pProducto.Codigo = int.Parse(fila["IdProducto"].ToString());
                pProducto.Descripcion = fila["Descripcion"].ToString();
-               pProducto.Precio = float.Parse(fila["Precio"].ToString());
+               pProducto.Precio = decimal.Parse(fila["Precio"].ToString());
                pProducto.Cantidad = int.Parse(fila["Cantidad"].ToString());
                
                pTipoProducto.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
@@ -145,7 +145,7 @@ namespace SportMaxController.Clases
 
                pProducto.Codigo = int.Parse(fila["idProducto"].ToString());
                pProducto.Descripcion = fila["Descripcion"].ToString();
-               pProducto.Precio = float.Parse(fila["Precio"].ToString());
+               pProducto.Precio = decimal.Parse(fila["Precio"].ToString());
                pProducto.Cantidad = int.Parse(fila["Cantidad"].ToString());
 
                pTipoProducto.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
@@ -181,7 +181,7 @@ namespace SportMaxController.Clases
 
                pProducto.Codigo = int.Parse(fila["idProducto"].ToString());
                pProducto.Descripcion = fila["Descripcion"].ToString();
-               pProducto.Precio = float.Parse(fila["Precio"].ToString());
+               pProducto.Precio = decimal.Parse(fila["Precio"].ToString());
                pProducto.Cantidad = int.Parse(fila["Cantidad"].ToString());
 
                pTipoProducto.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
@@ -200,6 +200,41 @@ namespace SportMaxController.Clases
            return lista;
        }
 
+       public Producto BuscarxCod(int Codigo)
+       {
+           DALProducto dalProducto = new DALProducto();
+           DataTable tabla = dalProducto.BuscarxCodigo(Codigo);
+           List<Producto> lista = new List<Producto>();
+           Producto pProducto = new Producto(); 
+           TipoProducto pTipoProducto;
+           Marca pMarca;
+
+           foreach (DataRow fila in tabla.Rows)
+           {
+               pProducto = new Producto();
+               pTipoProducto = new TipoProducto();
+               pMarca = new Marca();
+
+               pProducto.Codigo = int.Parse(fila["idProducto"].ToString());
+               pProducto.Descripcion = fila["Descripcion"].ToString();
+               pProducto.Precio = decimal.Parse(fila["Precio"].ToString());
+               pProducto.Cantidad = int.Parse(fila["Cantidad"].ToString());
+
+               pTipoProducto.IdTipoProducto = int.Parse(fila["IdTipoProducto"].ToString());
+               pTipoProducto.Descripcion = fila["TipoProdDescrip"].ToString();
+               pProducto.TipoProducto = pTipoProducto;
+
+               pMarca.IdMarca = int.Parse(fila["IdMarca"].ToString());
+               pMarca.Descripcion = fila["MarcaDescrip"].ToString();
+               pProducto.Marca = pMarca;
+               pProducto.Talle = fila["Talle"].ToString();
+               pProducto.Estado = int.Parse(fila["Estado"].ToString());
+
+               
+           }
+
+           return pProducto;
+       }
        public int Modificar()
        {
            DALProducto dalProducto = new DALProducto();
@@ -214,12 +249,12 @@ namespace SportMaxController.Clases
            }
        }
 
-       public int Eliminar(int idProducto)
+       public int Eliminar()
        {
            DALProducto dalProducto = new DALProducto();
            try
            {
-               return dalProducto.EliminarProducto(idProducto);
+               return dalProducto.EliminarProducto(this.Codigo);
            }
            catch (Exception)
            {
@@ -227,6 +262,22 @@ namespace SportMaxController.Clases
                throw;
            }
        }
+
+       public int ActualizarCatidad()
+       {
+
+           DALProducto dalProduct = new DALProducto();
+           try
+           {
+               return dalProduct.ActualizarCantidad(this.Codigo, this.Cantidad);
+           }
+           catch (Exception)
+           {
+               
+               throw;
+           }
+       }
+
        #endregion
 
    }

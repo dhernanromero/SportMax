@@ -33,6 +33,7 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -65,6 +66,7 @@
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Visible = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnEmpleado
             // 
@@ -86,11 +88,23 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Location = new System.Drawing.Point(280, 142);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(105, 55);
+            this.btnPerfil.TabIndex = 7;
+            this.btnPerfil.Text = "Mi Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Visible = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 283);
+            this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnEmpleado);
             this.Controls.Add(this.btnVentas);
@@ -111,5 +125,6 @@
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnEmpleado;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnPerfil;
     }
 }

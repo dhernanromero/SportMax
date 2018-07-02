@@ -60,12 +60,12 @@ namespace SportMaxController.Clases
             DataTable tabal = dalUser.Autenticar(this.User, this.Password);
             List<Usuario> lista = new List<Usuario>();
             //Usuario pUser = new Usuario();
-            //TipoUsuario pTipoUsuario;
+            TipoUsuario pTipoUsuario;
 
             foreach (DataRow fila in tabal.Rows)
             {
                 //pUser = new Usuario();
-                //pTipoUsuario = new TipoUsuario();
+                pTipoUsuario = new TipoUsuario();
 
                 //pUser.IdUsuario = int.Parse(fila["idUsuario"].ToString());
                 //pUser.User = fila["Usuario"].ToString();
@@ -78,10 +78,11 @@ namespace SportMaxController.Clases
 
                 this.IdUsuario = int.Parse(fila["idUsuario"].ToString());
                 this.User = fila["Usuario"].ToString();
-                this.TipoUsuario.IdTipoUsuario = int.Parse(fila["idTipoUsuario"].ToString());
-                this.TipoUsuario.Descripcion = fila["Descripcion"].ToString();
-                this.TipoUsuario.CodUsuario = fila["CodUsuario"].ToString();
-                //pUser.TipoUsuario = pTipoUsuario;
+                this.Password = fila["Password"].ToString();
+                pTipoUsuario.IdTipoUsuario = int.Parse(fila["idTipoUsuario"].ToString());
+                pTipoUsuario.Descripcion = fila["Descripcion"].ToString();
+                pTipoUsuario.CodUsuario  = fila["CodUsuario"].ToString();
+                this.TipoUsuario = pTipoUsuario;
                 
             }
 
@@ -125,11 +126,25 @@ namespace SportMaxController.Clases
             DALUsuario user = new DALUsuario();
             try
             {
-                return user.ModificarUsuario(this.IdUsuario, this.User, this.Password, this.TipoUsuario.IdTipoUsuario);
+                return user.ModificarUsuario(this.IdUsuario, this.User, this.TipoUsuario.IdTipoUsuario);
             }
             catch (Exception)
             {
                 
+                throw;
+            }
+        }
+
+        public void ModificarContraseña()
+        {
+            DALUsuario user = new DALUsuario();
+            try
+            {
+                user.ModificarContraseña(this.IdUsuario,this.User, this.Password);
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

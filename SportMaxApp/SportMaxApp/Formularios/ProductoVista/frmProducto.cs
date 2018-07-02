@@ -65,7 +65,7 @@ namespace SportMaxApp.Formularios.ProductoVista
             nProducto.Descripcion = txtDescripcion.Text;
             nProducto.TipoProducto = (TipoProducto)cboTipo.SelectedItem;
             nProducto.Marca = (Marca)cboMarca.SelectedItem; 
-            nProducto.Precio = float.Parse(txtPrecio.Text);
+            nProducto.Precio = decimal.Parse(txtPrecio.Text);
             nProducto.Cantidad = int.Parse(txtCantidad.Text);
             nProducto.Talle = txtTalle.Text;
             nProducto.Estado = cboEstado.SelectedIndex;

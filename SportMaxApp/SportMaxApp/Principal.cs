@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportMaxApp.Formularios.ProductoVista;
-using SportMaxApp.Formularios.Venta;
+using SportMaxApp.Formularios.VentaVista;
 using SportMaxApp.Formularios.EmpleadoVista;
 using SportMaxController.Clases;
 
@@ -69,15 +69,15 @@ namespace SportMaxApp
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            if (Master.Equals(string.Empty))
+            if (Master == null)
             {
                 switch (Usuario.TipoUsuario.CodUsuario)
                 {
-                    case "ADMIN": btnVentas.Visible = true; btnProducto.Visible = true; btnEmpleado.Visible = true; break;
+                    case "ADMIN": btnVentas.Visible = true; btnProducto.Visible = true; btnEmpleado.Visible = true; btnPerfil.Visible = true; break;
                     case "GEREN": btnProducto.Visible = true; break;
-                    case "VENDE": btnVentas.Visible = true; break;
-                    case "STOCK": btnProducto.Visible = true; break;
-                    case "SISTE": btnProducto.Visible = true; btnVentas.Visible = true; break;
+                    case "VENDE": btnVentas.Visible = true; btnPerfil.Visible = true; break;
+                    case "STOCK": btnProducto.Visible = true; btnPerfil.Visible = true; break;
+                    case "SISTE": btnProducto.Visible = true; btnVentas.Visible = true; btnPerfil.Visible = true; break;
                 }
             }
             else
@@ -107,6 +107,39 @@ namespace SportMaxApp
             this.Close();
             
             Padre.Show();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            Empleado Empl = new Empleado();
+            Empleado nEmpleado = new Empleado();
+
+            nEmpleado = Empl.BuscarxIdUsuario(Usuario.IdUsuario);
+
+            frmVenta frmVenta = new frmVenta(this, nEmpleado);
+            this.Hide();
+            frmVenta.ShowDialog(); 
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            if (Usuario.IdUsuario.Equals(null))
+            {
+                MessageBox.Show("Usuario ADMI"); 
+            
+            }
+            else
+            {
+                Empleado Empl = new Empleado();
+                Empleado nEmpleado = new Empleado();
+
+                nEmpleado = Empl.BuscarxIdUsuario(Usuario.IdUsuario);
+                frmEmpleado frmEmpl = new frmEmpleado(this, "P", nEmpleado);
+                this.Hide();
+                frmEmpl.ShowDialog();
+            }
+            
+
         }
     }
 }

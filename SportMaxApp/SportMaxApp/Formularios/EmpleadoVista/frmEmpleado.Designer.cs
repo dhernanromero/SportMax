@@ -54,6 +54,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.btnModContraseña = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLegajo
@@ -189,7 +190,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(197, 208);
+            this.btnAceptar.Location = new System.Drawing.Point(285, 208);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(77, 29);
             this.btnAceptar.TabIndex = 13;
@@ -276,11 +277,22 @@
             this.dtpFechaNac.TabIndex = 6;
             this.dtpFechaNac.Value = new System.DateTime(2018, 6, 10, 20, 58, 20, 0);
             // 
+            // btnModContraseña
+            // 
+            this.btnModContraseña.Location = new System.Drawing.Point(175, 205);
+            this.btnModContraseña.Name = "btnModContraseña";
+            this.btnModContraseña.Size = new System.Drawing.Size(79, 35);
+            this.btnModContraseña.TabIndex = 24;
+            this.btnModContraseña.Text = "Modificar Contraseña";
+            this.btnModContraseña.UseVisualStyleBackColor = true;
+            this.btnModContraseña.Click += new System.EventHandler(this.btnModContraseña_Click);
+            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 253);
+            this.Controls.Add(this.btnModContraseña);
             this.Controls.Add(this.dtpFechaNac);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPass);
@@ -308,7 +320,7 @@
             this.Controls.Add(this.txtLegajo);
             this.Controls.Add(this.lblLegajo);
             this.Name = "frmEmpleado";
-            this.Text = "frmEmpleado";
+            this.Text = "Empleados";
             this.Load += new System.EventHandler(this.frmEmpleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -343,5 +355,6 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.Button btnModContraseña;
     }
 }
