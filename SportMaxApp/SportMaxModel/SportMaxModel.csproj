@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="DALCliente.cs" />
-    <Compile Include="DALDetalleVenta.cs" />
+    <Compile Include="DALDetallVenta.cs" />
     <Compile Include="DALEmpleado.cs" />
     <Compile Include="DALMarca.cs" />
     <Compile Include="DALProducto.cs" />

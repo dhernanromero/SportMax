@@ -13,18 +13,16 @@ namespace SportMaxApp.Formularios.ClienteVista
 {
     public partial class frmCliente : Form
     {
-        public frmCliente(Form frmPadre, Cliente pClie = null, int pDniCliente = 0)
+        public frmCliente(Form frmPadre, Cliente pClie = null)
         {
             InitializeComponent();
             Padre = frmPadre;
             Client = pClie;
-            DNICliente = pDniCliente; 
         }
         
         
         private Form _padre;
         private Cliente _cliente;
-        private int _dniCliente;
 
         public Form Padre
         {
@@ -39,20 +37,9 @@ namespace SportMaxApp.Formularios.ClienteVista
             get { return _cliente; }
         }
 
-        public int DNICliente
-        {
-            set { _dniCliente = value; }
-            get { return _dniCliente; }
-        }
-
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            if (DNICliente > 0)
-            {
-                txtDNI.Text = DNICliente.ToString();
-                txtDNI.Enabled = true;
 
-            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -70,7 +57,7 @@ namespace SportMaxApp.Formularios.ClienteVista
         {
             int resCliente = 0;
 
-            Client = new Cliente();
+
             Client.IdCliente = Client.ObtenerId();
             Client.Nombre = txtNombre.Text;
             Client.Apellido = txtApellido.Text;
@@ -83,15 +70,6 @@ namespace SportMaxApp.Formularios.ClienteVista
             try
             {
                 resCliente = Client.Agregar();
-                if (resCliente > 0)
-                {
-                    MessageBox.Show("Cliente insertado correctamente");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Error al Insertar cliente"); 
-                }
             }
             catch (Exception ex)
             {

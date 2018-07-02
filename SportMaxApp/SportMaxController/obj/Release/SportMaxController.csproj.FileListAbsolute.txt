@@ -1,7 +1,0 @@
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxController\bin\Release\SportMaxController.dll
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxController\bin\Release\SportMaxController.pdb
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxController\bin\Release\SportMaxModel.dll
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxController\bin\Release\SportMaxModel.pdb
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxController\obj\Release\SportMaxController.csprojResolveAssemblyReference.cache
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxController\obj\Release\SportMaxController.dll
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxController\obj\Release\SportMaxController.pdb

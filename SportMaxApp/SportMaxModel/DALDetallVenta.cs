@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace SportMaxModel
 {
-    public class DALDetalleVenta
+    public class DALDetallVenta
     {
         Conexion objConexion = new Conexion();
 
