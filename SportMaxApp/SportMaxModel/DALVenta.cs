@@ -40,7 +40,7 @@ namespace SportMaxModel
             param[2] = objConexion.crearParametro("@iIdCliente", iIdCliente);
             param[3] = objConexion.crearParametro("@iIdFormaPago", iIdFormaPago);
             param[4] = objConexion.crearParametro("@dFechaVenta", dtFechaVenta);
-            param[5] = objConexion.crearParametro("@dMontoTotal", dMontoTotal.ToString());
+            param[5] = objConexion.crearParametro("@dMontoTotal", dMontoTotal);
 
             try
             {

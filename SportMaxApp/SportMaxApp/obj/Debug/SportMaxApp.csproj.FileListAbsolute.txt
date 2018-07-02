@@ -31,25 +31,6 @@ C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\Sport
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ProductoVista.frmProducto.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.EmpleadoVista.frmEmpleado.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.EmpleadoVista.abmEmpleado.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.pdb
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxController.dll
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxModel.dll
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxController.pdb
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxModel.pdb
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.csprojResolveAssemblyReference.cache
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.EmpleadoVista.frmEmpleado.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ProductoVista.abmProducto.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ProductoVista.frmProducto.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.EmpleadoVista.abmEmpleado.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Login.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Properties.Resources.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.frmPrincipal.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.Venta.frmVenta.resources
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.csproj.GenerateResource.Cache
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.exe
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.pdb
-C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe.config
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Debug\SportMaxApp.exe.config
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.VentaVista.frmVenta.resources
 C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Debug\SportMaxApp.Formularios.ClienteVista.frmCliente.resources

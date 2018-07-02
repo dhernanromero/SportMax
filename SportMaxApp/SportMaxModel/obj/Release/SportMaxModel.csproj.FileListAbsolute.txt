@@ -1,0 +1,5 @@
+C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\bin\Release\SportMaxModel.dll
+C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\bin\Release\SportMaxModel.pdb
+C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.csprojResolveAssemblyReference.cache
+C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.dll
+C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.pdb

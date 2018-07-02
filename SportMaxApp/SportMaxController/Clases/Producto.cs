@@ -263,13 +263,13 @@ namespace SportMaxController.Clases
            }
        }
 
-       public int ActualizarCatidad()
+       public int ActualizarCatidad(int pCantidad)
        {
 
            DALProducto dalProduct = new DALProducto();
            try
            {
-               return dalProduct.ActualizarCantidad(this.Codigo, this.Cantidad);
+               return dalProduct.ActualizarCantidad(this.Codigo, pCantidad);
            }
            catch (Exception)
            {

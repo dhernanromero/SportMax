@@ -63,7 +63,7 @@ namespace SportMaxController.Clases
         public int Agregar()
         {
             DALVenta dalVenta = new DALVenta();
-            DALDetallVenta dalDetalle = new DALDetallVenta();
+            DALDetalleVenta dalDetalle = new DALDetalleVenta();
 
             try
             {
