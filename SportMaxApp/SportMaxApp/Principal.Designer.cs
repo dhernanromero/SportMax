@@ -76,6 +76,7 @@
             this.btnEmpleado.TabIndex = 5;
             this.btnEmpleado.Text = "Empleados";
             this.btnEmpleado.UseVisualStyleBackColor = true;
+            this.btnEmpleado.Visible = false;
             this.btnEmpleado.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnCerrarSesion

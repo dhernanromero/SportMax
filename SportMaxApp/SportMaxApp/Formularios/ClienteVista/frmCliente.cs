@@ -95,8 +95,8 @@ namespace SportMaxApp.Formularios.ClienteVista
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                throw;
+                MessageBox.Show("Error al agregar un cliente");
+                //throw;
             }
 
         }

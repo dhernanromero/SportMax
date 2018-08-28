@@ -18,3 +18,23 @@ C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Rel
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.csproj.GenerateResource.Cache
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.exe
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Release\SportMaxApp.exe.config
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Release\SportMaxApp.exe
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Release\SportMaxApp.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Release\SportMaxController.dll
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Release\SportMaxModel.dll
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Release\SportMaxController.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\bin\Release\SportMaxModel.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.Formularios.ClienteVista.frmCliente.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.Formularios.EmpleadoVista.frmEmpleado.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.Formularios.ProductoVista.abmProducto.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.Formularios.ProductoVista.frmProducto.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.Formularios.EmpleadoVista.abmEmpleado.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.Login.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.Properties.Resources.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.frmPrincipal.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.Formularios.VentaVista.frmVenta.resources
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.csproj.GenerateResource.Cache
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.exe
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxApp\obj\Release\SportMaxApp.pdb

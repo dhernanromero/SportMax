@@ -84,7 +84,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
 
             nUsers.IdUsuario = (Accion.Equals("A") ? nUsers.ObtenerId() : Empl.Usuario.IdUsuario); 
             nUsers.User = txtUsuario.Text;
-            nUsers.Password = (Accion.Equals("A") ? txtPass.Text: Empl.Usuario.Password);
+            nUsers.Password = (Accion.Equals("A")||Accion.Equals("P") ? txtPass.Text: Empl.Usuario.Password);
             nTipoUser.IdTipoUsuario = cboTipoUsuario.SelectedIndex;
             nUsers.TipoUsuario = nTipoUser; 
             nEmpleado.Usuario = nUsers;
@@ -105,6 +105,8 @@ namespace SportMaxApp.Formularios.EmpleadoVista
                 }
                 else if(Accion.Equals("P"))
                 {
+
+                    nEmpleado.Usuario.ModificarContraseña(); 
                     Salir();
                 }
 
@@ -122,8 +124,8 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                throw;
+                MessageBox.Show("Error al relaizar la transaccion");
+                //throw;
             }
 
  

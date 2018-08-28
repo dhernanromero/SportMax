@@ -126,7 +126,7 @@ namespace SportMaxApp.Formularios.EmpleadoVista
             catch (Exception)
             {
                 
-                throw;
+                MessageBox.Show("Ocurrio un error al realizar la la operacion ");
             }
             
 

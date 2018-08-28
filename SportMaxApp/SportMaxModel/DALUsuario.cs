@@ -121,7 +121,7 @@ namespace SportMaxModel
 
             try
             {
-                return objConexion.EscribirPorStoreProcedure("Usuario_ActualizarContrasela", param);
+                return objConexion.EscribirPorStoreProcedure("Usuario_CambiarContraseña", param);
             }
             catch (Exception ex)
             {

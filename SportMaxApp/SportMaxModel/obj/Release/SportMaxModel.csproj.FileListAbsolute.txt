@@ -3,3 +3,8 @@ C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\bin\R
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.csprojResolveAssemblyReference.cache
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.dll
 C:\DiegoBF\UPE\Tecnicas de Programacion\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\bin\Release\SportMaxModel.dll
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\bin\Release\SportMaxModel.pdb
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.dll
+C:\Users\Diego\Documents\GitHub\SportMax\SportMaxApp\SportMaxModel\obj\Release\SportMaxModel.pdb
